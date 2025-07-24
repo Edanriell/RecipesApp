@@ -7,8 +7,22 @@
     <projectFile kind="XamarinMacOS">RecipesApp.Mobile/RecipesApp.Mobile.csproj</projectFile>
     <projectFile profileName="Windows Machine">RecipesApp.Mobile/RecipesApp.Mobile.csproj</projectFile>
   </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f8324e9-0ef4-44dc-bfec-2ad6aec8c428" name="Changes" comment="" />
+    <list default="true" id="8f8324e9-0ef4-44dc-bfec-2ad6aec8c428" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Mobile.UnitTests/GlobalUsings.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Mobile.UnitTests/InstructionsDataTemplateSelectorTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Mobile.UnitTests/RatingToStarsConverterTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.RecipesApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RecipesApp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0-ios/iossimulator-x64/RecipesApp.Mobile.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0-ios/iossimulator-x64/RecipesApp.Mobile.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0-ios/iossimulator-x64/RecipesApp.Mobile.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0-ios/iossimulator-x64/RecipesApp.Mobile.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0-maccatalyst/maccatalyst-x64/RecipesApp.Mobile.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0-maccatalyst/maccatalyst-x64/RecipesApp.Mobile.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0-maccatalyst/maccatalyst-x64/RecipesApp.Mobile.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0-maccatalyst/maccatalyst-x64/RecipesApp.Mobile.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.sln" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.sln" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,6 +30,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/RecipesApp.Mobile.UnitTests/UnitTest1.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="InvalidFacetManager">
+    <ignored-facets>
+      <facet id="RecipesApp.Mobile/invalid/Android Facet - RecipesApp.Mobile" />
+    </ignored-facets>
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "customColor": "",
@@ -31,7 +53,7 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "git-widget-placeholder": "develop",
+    "git-widget-placeholder": "feature/app-unittests",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -98,7 +120,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1757243242142</updated>
-      <workItem from="1757243244190" duration="321000" />
+      <workItem from="1757243244190" duration="764000" />
     </task>
     <servers />
   </component>
