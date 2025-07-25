@@ -12,10 +12,67 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f8324e9-0ef4-44dc-bfec-2ad6aec8c428" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/RecipesApp.Mobile.UnitTests/GlobalUsings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecipesApp.Mobile.UnitTests/InstructionsDataTemplateSelectorTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecipesApp.Mobile.UnitTests/RatingToStarsConverterTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/Features/Favorites/FavoritesService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/Features/Favorites/IFavoritesRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/Features/Favorites/IFavoritesService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/Features/Ratings/IRatingsRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/Features/Ratings/IRatingsService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/Features/Ratings/Rating.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/Features/Ratings/RatingsService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/Features/Recipes/IRecipeRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/Features/Recipes/IRecipeService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/Features/Recipes/Recipe.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/Features/Recipes/RecipeService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/Messages/CultureChangedMessage.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/Messages/FavoriteUpdateMessage.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/Messages/ServingsChangedMessage.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/Navigation/INavigatable.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/Navigation/INavigatedFrom.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/Navigation/INavigatedTo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/Navigation/INavigationParameterReceiver.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/Navigation/INavigationService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/Navigation/NavigationType.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/Nothing.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/RecipesApp.Client.Core.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/Result.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/Services/IDialogService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/Validation/EmptyOrWithinRangeAttribute.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/Validation/ValidationErrorExposer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/ViewModels/AddRatingViewModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/ViewModels/IngredientsListViewModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/ViewModels/InstructionBaseViewModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/ViewModels/InstructionViewModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/ViewModels/NoteViewModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/ViewModels/PickLanguageViewModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/ViewModels/RatingGroup.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/ViewModels/RecipeDetailViewModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/ViewModels/RecipeIngredientViewModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/ViewModels/RecipeListItemViewModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/ViewModels/RecipeRatingsDetailViewModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/ViewModels/RecipeRatingsSummaryViewModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/ViewModels/RecipesOverviewViewModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/ViewModels/SettingsViewModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/ViewModels/UserReviewViewModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/obj/Debug/net9.0/.NETCoreApp,Version=v9.0.AssemblyAttributes.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/obj/Debug/net9.0/RecipesApp.Client.Core.AssemblyInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/obj/Debug/net9.0/RecipesApp.Client.Core.AssemblyInfoInputs.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/obj/Debug/net9.0/RecipesApp.Client.Core.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/obj/Debug/net9.0/RecipesApp.Client.Core.GlobalUsings.g.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/obj/Debug/net9.0/RecipesApp.Client.Core.assets.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/obj/Debug/net9.0/RecipesApp.Client.Core.csproj.AssemblyReference.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/obj/RecipesApp.Client.Core.csproj.nuget.dgspec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/obj/RecipesApp.Client.Core.csproj.nuget.g.props" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/obj/RecipesApp.Client.Core.csproj.nuget.g.targets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/obj/project.assets.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/obj/project.nuget.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/obj/project.packagespec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/obj/rider.project.restore.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RecipesApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RecipesApp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile.UnitTests/obj/Debug/net9.0/RecipesApp.Mobile.UnitTests.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile.UnitTests/obj/Debug/net9.0/RecipesApp.Mobile.UnitTests.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile.UnitTests/obj/Debug/net9.0/RecipesApp.Mobile.UnitTests.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile.UnitTests/obj/Debug/net9.0/RecipesApp.Mobile.UnitTests.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile.UnitTests/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile.UnitTests/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile.UnitTests/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile.UnitTests/obj/rider.project.restore.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0-ios/iossimulator-x64/RecipesApp.Mobile.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0-ios/iossimulator-x64/RecipesApp.Mobile.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0-ios/iossimulator-x64/RecipesApp.Mobile.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0-ios/iossimulator-x64/RecipesApp.Mobile.AssemblyInfoInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0-maccatalyst/maccatalyst-x64/RecipesApp.Mobile.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0-maccatalyst/maccatalyst-x64/RecipesApp.Mobile.AssemblyInfo.cs" afterDir="false" />
@@ -31,9 +88,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/RecipesApp.Mobile.UnitTests/UnitTest1.cs" root0="FORCE_HIGHLIGHTING" />
-  </component>
   <component name="InvalidFacetManager">
     <ignored-facets>
       <facet id="RecipesApp.Mobile/invalid/Android Facet - RecipesApp.Mobile" />
@@ -48,20 +102,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/app-unittests&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "git-widget-placeholder": "feature/client-core",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="iOS.RecipesApp.Mobile">
     <configuration name="RecipesApp.Mobile: Windows Machine" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/RecipesApp.Mobile/RecipesApp.Mobile.csproj" />
@@ -120,7 +174,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1757243242142</updated>
-      <workItem from="1757243244190" duration="764000" />
+      <workItem from="1757243244190" duration="1074000" />
     </task>
     <servers />
   </component>
