@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "F0p1dKu8AKw=",
+  "success": true,
+  "projectFilePath": "D:\\Projects\\RecipesApp\\RecipesApp.Client.Core\\RecipesApp.Client.Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Lauris\\.nuget\\packages\\communitytoolkit.mvvm\\8.4.0\\communitytoolkit.mvvm.8.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}
