@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RecipesApp.Localization")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+58f0b6e9452e83c7196a379ff86cc408e4dcf28d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2c096fab84f002dc4a1f77cf38438b1bd77529d8")]
 [assembly: System.Reflection.AssemblyProductAttribute("RecipesApp.Localization")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RecipesApp.Localization")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
