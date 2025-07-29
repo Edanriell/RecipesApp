@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipesApp.Localization.Mau
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipesApp.Client.Core.UnitTests", "RecipesApp.Client.Core.UnitTests\RecipesApp.Client.Core.UnitTests.csproj", "{7F112AEF-7855-4200-AE7C-39E19D9142FF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipesApp.Shared", "RecipesApp.Shared\RecipesApp.Shared.csproj", "{D50612BD-B39A-492A-9567-DDA090A6F2C9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,5 +44,9 @@ Global
 		{7F112AEF-7855-4200-AE7C-39E19D9142FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F112AEF-7855-4200-AE7C-39E19D9142FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F112AEF-7855-4200-AE7C-39E19D9142FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D50612BD-B39A-492A-9567-DDA090A6F2C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D50612BD-B39A-492A-9567-DDA090A6F2C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D50612BD-B39A-492A-9567-DDA090A6F2C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D50612BD-B39A-492A-9567-DDA090A6F2C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
