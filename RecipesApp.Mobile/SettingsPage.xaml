@@ -6,13 +6,16 @@
     xmlns:localization="clr-namespace:Localization;assembly=Localization"
     xmlns:mauiloc="clr-namespace:Localization.Maui;assembly=Localization.Maui"
     xmlns:vms="clr-namespace:Recipes.Client.Core.ViewModels;assembly=Recipes.Client.Core"
-    Title="{mauiloc:Translate SettingsTitle}"
-    x:DataType="vms:SettingsViewModel">
+    xmlns:viewModels="clr-namespace:Recipes.Client.Core.ViewModels;assembly=RecipesApp.Client.Core"
+    xmlns:maui="clr-namespace:Localization.Maui;assembly=RecipesApp.Localization.Maui"
+    xmlns:localization1="clr-namespace:Localization;assembly=RecipesApp.Localization"
+    Title="{maui:Translate SettingsTitle}"
+    x:DataType="viewModels:SettingsViewModel">
     <VerticalStackLayout>
         <Label FontSize="14" HorizontalOptions="Center">
             <Label.Text>
                 <MultiBinding StringFormat="{}{0}: {1}">
-                    <Binding Path="[Language]" Source="{x:Static localization:LocalizedResourcesProvider.Instance}" />
+                    <Binding Path="[Language]" Source="{x:Static localization1:LocalizedResourcesProvider.Instance}" />
                     <Binding Path="CurrentLanguage" />
                 </MultiBinding>
             </Label.Text>
@@ -21,12 +24,12 @@
             Margin="0,5"
             Background="White"
             Command="{Binding SelectLanguageCommand}"
-            Text="{mauiloc:Translate ChooseLanguage}"
+            Text="{maui:Translate ChooseLanguage}"
             TextColor="{StaticResource Primary}" />
         <Button
             Margin="0,5"
             Background="White"
-            Text="{mauiloc:Translate About}"
+            Text="{maui:Translate About}"
             TextColor="{StaticResource Primary}" />
         <Label
             Margin="0,10"

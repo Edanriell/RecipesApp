@@ -1,0 +1,97 @@
+﻿# Build outputs
+bin/
+obj/
+[Bb]uild/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+
+# Visual Studio / Rider
+.vs/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Rider caches
+*.iml
+.gradle/
+out/
+
+# .NET
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# MAUI generated assets
+**/Resources/Raw/*
+!**/Resources/Raw/.keep
+**/Resources/AppIcon/*
+**/Resources/Splash/*
+**/Resources/Fonts/*.cache
+**/Platforms/*/bin/
+**/Platforms/*/obj/
+
+# Xcode
+*.xcuserstate
+*.xcworkspace/
+*.xcuserdatad/
+DerivedData/
+Pods/
+
+# Android
+*.apk
+*.aab
+*.keystore
+*.jks
+.gradle/
+local.properties
+
+# Mac
+*.DS_Store
+*.AppleDouble
+*.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Logs
+*.log
+
+# Test results
+TestResults/
+*.coverage
+*.coveragexml
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+*.nuget.props
+*.nuget.targets
+
+# Resharper
+_ReSharper*/
+*.DotSettings.user
+
+# Rider logs
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/dictionaries
+.idea/**/libraries
+.idea/**/shelf/
+.idea/**/httpRequests/
+
+# Temp
+*.swp
+*.tmp
+*.temp
+*.bak
+
+# JetBrains Rider MAUI hot reload cache
+*.maui-cache

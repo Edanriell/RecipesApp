@@ -1,7 +1,7 @@
 using Recipes.Mobile.Converters;
 
 namespace Recipes.Mobile.UnitTests;
- 
+
 public class RatingToStarsConverterTests
 {
     [Theory]

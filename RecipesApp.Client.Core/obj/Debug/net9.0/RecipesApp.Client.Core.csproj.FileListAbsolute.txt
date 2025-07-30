@@ -1,0 +1,16 @@
+D:\Projects2\RecipesApp\RecipesApp.Client.Core\bin\Debug\net9.0\RecipesApp.Client.Core.deps.json
+D:\Projects2\RecipesApp\RecipesApp.Client.Core\bin\Debug\net9.0\RecipesApp.Client.Core.dll
+D:\Projects2\RecipesApp\RecipesApp.Client.Core\bin\Debug\net9.0\RecipesApp.Client.Core.pdb
+D:\Projects2\RecipesApp\RecipesApp.Client.Core\bin\Debug\net9.0\RecipesApp.Localization.dll
+D:\Projects2\RecipesApp\RecipesApp.Client.Core\bin\Debug\net9.0\RecipesApp.Localization.pdb
+D:\Projects2\RecipesApp\RecipesApp.Client.Core\obj\Debug\net9.0\RecipesApp.Client.Core.csproj.AssemblyReference.cache
+D:\Projects2\RecipesApp\RecipesApp.Client.Core\obj\Debug\net9.0\RecipesApp.Client.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects2\RecipesApp\RecipesApp.Client.Core\obj\Debug\net9.0\RecipesApp.Client.Core.AssemblyInfoInputs.cache
+D:\Projects2\RecipesApp\RecipesApp.Client.Core\obj\Debug\net9.0\RecipesApp.Client.Core.AssemblyInfo.cs
+D:\Projects2\RecipesApp\RecipesApp.Client.Core\obj\Debug\net9.0\RecipesApp.Client.Core.csproj.CoreCompileInputs.cache
+D:\Projects2\RecipesApp\RecipesApp.Client.Core\obj\Debug\net9.0\RecipesApp.Client.Core.sourcelink.json
+D:\Projects2\RecipesApp\RecipesApp.Client.Core\obj\Debug\net9.0\RecipesA.1C1C6E38.Up2Date
+D:\Projects2\RecipesApp\RecipesApp.Client.Core\obj\Debug\net9.0\RecipesApp.Client.Core.dll
+D:\Projects2\RecipesApp\RecipesApp.Client.Core\obj\Debug\net9.0\refint\RecipesApp.Client.Core.dll
+D:\Projects2\RecipesApp\RecipesApp.Client.Core\obj\Debug\net9.0\RecipesApp.Client.Core.pdb
+D:\Projects2\RecipesApp\RecipesApp.Client.Core\obj\Debug\net9.0\ref\RecipesApp.Client.Core.dll

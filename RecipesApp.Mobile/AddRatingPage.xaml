@@ -6,8 +6,9 @@
     xmlns:annotations="clr-namespace:System.ComponentModel.DataAnnotations;assembly=System.ComponentModel.DataAnnotations"
     xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
     xmlns:vms="clr-namespace:Recipes.Client.Core.ViewModels;assembly=Recipes.Client.Core"
+    xmlns:viewModels="clr-namespace:Recipes.Client.Core.ViewModels;assembly=RecipesApp.Client.Core"
     Title="Add Rating"
-    x:DataType="vms:AddRatingViewModel"
+    x:DataType="viewModels:AddRatingViewModel"
     Shell.PresentationMode="ModalAnimated">
     <VerticalStackLayout Padding="10">
         <Grid RowDefinitions="Auto, Auto">

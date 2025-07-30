@@ -1,6 +1,3306 @@
 {
   "version": 3,
   "targets": {
+    "net9.0": {
+      "CommunityToolkit.Maui/12.2.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "12.2.0",
+          "Microsoft.Maui.Controls": "[9.0.90, 10.0.0)"
+        },
+        "compile": {
+          "lib/net9.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/12.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "[9.0.90, 10.0.0)",
+          "Microsoft.Maui.Essentials": "[9.0.90, 10.0.0)"
+        },
+        "compile": {
+          "lib/net9.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Mvvm/8.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/CommunityToolkit.Mvvm.targets": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration/9.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "9.0.8",
+          "Microsoft.Extensions.Primitives": "9.0.8"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.Configuration.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Configuration.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration.Abstractions/9.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "9.0.8"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.Configuration.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Configuration.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection/9.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.DependencyInjection.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.DependencyInjection.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/9.0.8": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Logging/9.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "9.0.8",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.8",
+          "Microsoft.Extensions.Options": "9.0.8"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Logging.Abstractions/9.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.Logging.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Logging.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/Microsoft.Extensions.Logging.Abstractions.targets": {}
+        }
+      },
+      "Microsoft.Extensions.Logging.Debug/9.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8",
+          "Microsoft.Extensions.Logging": "9.0.8",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.8"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.Logging.Debug.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Logging.Debug.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Options/9.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8",
+          "Microsoft.Extensions.Primitives": "9.0.8"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.Options.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Options.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/Microsoft.Extensions.Options.targets": {}
+        }
+      },
+      "Microsoft.Extensions.Primitives/9.0.8": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.Primitives.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Primitives.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "Microsoft.Maui.Controls/9.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls.Build.Tasks": "9.0.100",
+          "Microsoft.Maui.Controls.Core": "9.0.100",
+          "Microsoft.Maui.Controls.Xaml": "9.0.100",
+          "Microsoft.Maui.Resizetizer": "9.0.100"
+        }
+      },
+      "Microsoft.Maui.Controls.Build.Tasks/9.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls.Core": "9.0.100",
+          "Microsoft.Maui.Controls.Xaml": "9.0.100"
+        },
+        "build": {
+          "buildTransitive/netstandard2.0/Microsoft.Maui.Controls.Build.Tasks.props": {},
+          "buildTransitive/netstandard2.0/Microsoft.Maui.Controls.Build.Tasks.targets": {}
+        }
+      },
+      "Microsoft.Maui.Controls.Compatibility/9.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "9.0.8",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.8",
+          "Microsoft.Maui.Controls.Core": "9.0.100",
+          "Microsoft.Maui.Controls.Xaml": "9.0.100"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Maui.Controls.Compatibility.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Maui.Controls.Compatibility.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Microsoft.Maui.Controls.Core/9.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "9.0.8",
+          "Microsoft.Extensions.DependencyInjection": "9.0.8",
+          "Microsoft.Extensions.Logging": "9.0.8",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.8",
+          "Microsoft.Maui.Core": "9.0.100"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Maui.Controls.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Maui.Controls.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "resource": {
+          "lib/net9.0/ar/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "ar"
+          },
+          "lib/net9.0/ca/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "ca"
+          },
+          "lib/net9.0/cs/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/net9.0/da/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "da"
+          },
+          "lib/net9.0/de/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net9.0/el/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "el"
+          },
+          "lib/net9.0/es/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net9.0/fi/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "fi"
+          },
+          "lib/net9.0/fr/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net9.0/he/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "he"
+          },
+          "lib/net9.0/hi/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "hi"
+          },
+          "lib/net9.0/hr/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "hr"
+          },
+          "lib/net9.0/hu/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "hu"
+          },
+          "lib/net9.0/id/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "id"
+          },
+          "lib/net9.0/it/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net9.0/ja/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net9.0/ko/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net9.0/ms/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "ms"
+          },
+          "lib/net9.0/nb/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "nb"
+          },
+          "lib/net9.0/nl/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "nl"
+          },
+          "lib/net9.0/pl/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/net9.0/pt-BR/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net9.0/pt/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net9.0/ro/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "ro"
+          },
+          "lib/net9.0/ru/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net9.0/sk/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "sk"
+          },
+          "lib/net9.0/sv/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "sv"
+          },
+          "lib/net9.0/th/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "th"
+          },
+          "lib/net9.0/tr/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net9.0/uk/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "uk"
+          },
+          "lib/net9.0/vi/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "vi"
+          },
+          "lib/net9.0/zh-HK/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "zh-HK"
+          },
+          "lib/net9.0/zh-Hans/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/net9.0/zh-Hant/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        }
+      },
+      "Microsoft.Maui.Controls.Xaml/9.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "9.0.8",
+          "Microsoft.Maui.Controls.Core": "9.0.100",
+          "Microsoft.Maui.Core": "9.0.100"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Maui.Controls.Xaml.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Maui.Controls.Xaml.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Microsoft.Maui.Core/9.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "9.0.8",
+          "Microsoft.Extensions.DependencyInjection": "9.0.8",
+          "Microsoft.Extensions.Logging": "9.0.8",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.8",
+          "Microsoft.Maui.Essentials": "9.0.100",
+          "Microsoft.Maui.Graphics": "9.0.100"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Microsoft.Maui.Core.props": {},
+          "buildTransitive/Microsoft.Maui.Core.targets": {}
+        }
+      },
+      "Microsoft.Maui.Essentials/9.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Graphics": "9.0.100"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Maui.Essentials.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Maui.Essentials.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Microsoft.Maui.Graphics/9.0.100": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/Microsoft.Maui.Graphics.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Maui.Graphics.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Microsoft.Maui.Resizetizer/9.0.100": {
+        "type": "package",
+        "build": {
+          "buildTransitive/Microsoft.Maui.Resizetizer.props": {},
+          "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
+        }
+      },
+      "Refit/8.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Refit.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Refit.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netstandard2.0/refit.props": {},
+          "buildTransitive/netstandard2.0/refit.targets": {}
+        }
+      },
+      "RecipesApp.Client.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        }
+      },
+      "RecipesApp.Client.Repositories/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8",
+          "RecipesApp.Client.Core": "1.0.0",
+          "RecipesApp.Shared": "1.0.0",
+          "Refit": "8.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        }
+      },
+      "RecipesApp.Localization/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        }
+      },
+      "RecipesApp.Localization.Maui/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "9.0.82",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        }
+      },
+      "RecipesApp.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
+        }
+      }
+    },
+    "net9.0/android-arm64": {
+      "CommunityToolkit.Maui/12.2.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "12.2.0",
+          "Microsoft.Maui.Controls": "[9.0.90, 10.0.0)"
+        },
+        "compile": {
+          "lib/net9.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/12.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "[9.0.90, 10.0.0)",
+          "Microsoft.Maui.Essentials": "[9.0.90, 10.0.0)"
+        },
+        "compile": {
+          "lib/net9.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Mvvm/8.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/CommunityToolkit.Mvvm.targets": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration/9.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "9.0.8",
+          "Microsoft.Extensions.Primitives": "9.0.8"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.Configuration.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Configuration.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration.Abstractions/9.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "9.0.8"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.Configuration.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Configuration.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection/9.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.DependencyInjection.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.DependencyInjection.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/9.0.8": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Logging/9.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "9.0.8",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.8",
+          "Microsoft.Extensions.Options": "9.0.8"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Logging.Abstractions/9.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.Logging.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Logging.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/Microsoft.Extensions.Logging.Abstractions.targets": {}
+        }
+      },
+      "Microsoft.Extensions.Logging.Debug/9.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8",
+          "Microsoft.Extensions.Logging": "9.0.8",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.8"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.Logging.Debug.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Logging.Debug.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Options/9.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8",
+          "Microsoft.Extensions.Primitives": "9.0.8"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.Options.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Options.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/Microsoft.Extensions.Options.targets": {}
+        }
+      },
+      "Microsoft.Extensions.Primitives/9.0.8": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.Primitives.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Primitives.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "Microsoft.Maui.Controls/9.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls.Build.Tasks": "9.0.100",
+          "Microsoft.Maui.Controls.Core": "9.0.100",
+          "Microsoft.Maui.Controls.Xaml": "9.0.100",
+          "Microsoft.Maui.Resizetizer": "9.0.100"
+        }
+      },
+      "Microsoft.Maui.Controls.Build.Tasks/9.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls.Core": "9.0.100",
+          "Microsoft.Maui.Controls.Xaml": "9.0.100"
+        },
+        "build": {
+          "buildTransitive/netstandard2.0/Microsoft.Maui.Controls.Build.Tasks.props": {},
+          "buildTransitive/netstandard2.0/Microsoft.Maui.Controls.Build.Tasks.targets": {}
+        }
+      },
+      "Microsoft.Maui.Controls.Compatibility/9.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "9.0.8",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.8",
+          "Microsoft.Maui.Controls.Core": "9.0.100",
+          "Microsoft.Maui.Controls.Xaml": "9.0.100"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Maui.Controls.Compatibility.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Maui.Controls.Compatibility.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Microsoft.Maui.Controls.Core/9.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "9.0.8",
+          "Microsoft.Extensions.DependencyInjection": "9.0.8",
+          "Microsoft.Extensions.Logging": "9.0.8",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.8",
+          "Microsoft.Maui.Core": "9.0.100"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Maui.Controls.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Maui.Controls.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "resource": {
+          "lib/net9.0/ar/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "ar"
+          },
+          "lib/net9.0/ca/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "ca"
+          },
+          "lib/net9.0/cs/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/net9.0/da/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "da"
+          },
+          "lib/net9.0/de/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net9.0/el/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "el"
+          },
+          "lib/net9.0/es/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net9.0/fi/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "fi"
+          },
+          "lib/net9.0/fr/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net9.0/he/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "he"
+          },
+          "lib/net9.0/hi/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "hi"
+          },
+          "lib/net9.0/hr/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "hr"
+          },
+          "lib/net9.0/hu/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "hu"
+          },
+          "lib/net9.0/id/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "id"
+          },
+          "lib/net9.0/it/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net9.0/ja/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net9.0/ko/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net9.0/ms/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "ms"
+          },
+          "lib/net9.0/nb/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "nb"
+          },
+          "lib/net9.0/nl/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "nl"
+          },
+          "lib/net9.0/pl/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/net9.0/pt-BR/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net9.0/pt/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net9.0/ro/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "ro"
+          },
+          "lib/net9.0/ru/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net9.0/sk/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "sk"
+          },
+          "lib/net9.0/sv/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "sv"
+          },
+          "lib/net9.0/th/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "th"
+          },
+          "lib/net9.0/tr/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net9.0/uk/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "uk"
+          },
+          "lib/net9.0/vi/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "vi"
+          },
+          "lib/net9.0/zh-HK/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "zh-HK"
+          },
+          "lib/net9.0/zh-Hans/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/net9.0/zh-Hant/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        }
+      },
+      "Microsoft.Maui.Controls.Xaml/9.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "9.0.8",
+          "Microsoft.Maui.Controls.Core": "9.0.100",
+          "Microsoft.Maui.Core": "9.0.100"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Maui.Controls.Xaml.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Maui.Controls.Xaml.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Microsoft.Maui.Core/9.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "9.0.8",
+          "Microsoft.Extensions.DependencyInjection": "9.0.8",
+          "Microsoft.Extensions.Logging": "9.0.8",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.8",
+          "Microsoft.Maui.Essentials": "9.0.100",
+          "Microsoft.Maui.Graphics": "9.0.100"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Microsoft.Maui.Core.props": {},
+          "buildTransitive/Microsoft.Maui.Core.targets": {}
+        }
+      },
+      "Microsoft.Maui.Essentials/9.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Graphics": "9.0.100"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Maui.Essentials.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Maui.Essentials.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Microsoft.Maui.Graphics/9.0.100": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/Microsoft.Maui.Graphics.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Maui.Graphics.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Microsoft.Maui.Resizetizer/9.0.100": {
+        "type": "package",
+        "build": {
+          "buildTransitive/Microsoft.Maui.Resizetizer.props": {},
+          "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
+        }
+      },
+      "Refit/8.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Refit.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Refit.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netstandard2.0/refit.props": {},
+          "buildTransitive/netstandard2.0/refit.targets": {}
+        }
+      },
+      "RecipesApp.Client.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        }
+      },
+      "RecipesApp.Client.Repositories/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8",
+          "RecipesApp.Client.Core": "1.0.0",
+          "RecipesApp.Shared": "1.0.0",
+          "Refit": "8.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        }
+      },
+      "RecipesApp.Localization/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        }
+      },
+      "RecipesApp.Localization.Maui/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "9.0.82",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        }
+      },
+      "RecipesApp.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
+        }
+      }
+    },
+    "net9.0/android-x64": {
+      "CommunityToolkit.Maui/12.2.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "12.2.0",
+          "Microsoft.Maui.Controls": "[9.0.90, 10.0.0)"
+        },
+        "compile": {
+          "lib/net9.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/12.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "[9.0.90, 10.0.0)",
+          "Microsoft.Maui.Essentials": "[9.0.90, 10.0.0)"
+        },
+        "compile": {
+          "lib/net9.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Mvvm/8.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/CommunityToolkit.Mvvm.targets": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration/9.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "9.0.8",
+          "Microsoft.Extensions.Primitives": "9.0.8"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.Configuration.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Configuration.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration.Abstractions/9.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "9.0.8"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.Configuration.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Configuration.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection/9.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.DependencyInjection.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.DependencyInjection.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/9.0.8": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Logging/9.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "9.0.8",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.8",
+          "Microsoft.Extensions.Options": "9.0.8"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Logging.Abstractions/9.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.Logging.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Logging.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/Microsoft.Extensions.Logging.Abstractions.targets": {}
+        }
+      },
+      "Microsoft.Extensions.Logging.Debug/9.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8",
+          "Microsoft.Extensions.Logging": "9.0.8",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.8"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.Logging.Debug.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Logging.Debug.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Options/9.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8",
+          "Microsoft.Extensions.Primitives": "9.0.8"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.Options.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Options.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/Microsoft.Extensions.Options.targets": {}
+        }
+      },
+      "Microsoft.Extensions.Primitives/9.0.8": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.Primitives.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Primitives.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "Microsoft.Maui.Controls/9.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls.Build.Tasks": "9.0.100",
+          "Microsoft.Maui.Controls.Core": "9.0.100",
+          "Microsoft.Maui.Controls.Xaml": "9.0.100",
+          "Microsoft.Maui.Resizetizer": "9.0.100"
+        }
+      },
+      "Microsoft.Maui.Controls.Build.Tasks/9.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls.Core": "9.0.100",
+          "Microsoft.Maui.Controls.Xaml": "9.0.100"
+        },
+        "build": {
+          "buildTransitive/netstandard2.0/Microsoft.Maui.Controls.Build.Tasks.props": {},
+          "buildTransitive/netstandard2.0/Microsoft.Maui.Controls.Build.Tasks.targets": {}
+        }
+      },
+      "Microsoft.Maui.Controls.Compatibility/9.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "9.0.8",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.8",
+          "Microsoft.Maui.Controls.Core": "9.0.100",
+          "Microsoft.Maui.Controls.Xaml": "9.0.100"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Maui.Controls.Compatibility.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Maui.Controls.Compatibility.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Microsoft.Maui.Controls.Core/9.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "9.0.8",
+          "Microsoft.Extensions.DependencyInjection": "9.0.8",
+          "Microsoft.Extensions.Logging": "9.0.8",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.8",
+          "Microsoft.Maui.Core": "9.0.100"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Maui.Controls.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Maui.Controls.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "resource": {
+          "lib/net9.0/ar/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "ar"
+          },
+          "lib/net9.0/ca/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "ca"
+          },
+          "lib/net9.0/cs/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/net9.0/da/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "da"
+          },
+          "lib/net9.0/de/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net9.0/el/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "el"
+          },
+          "lib/net9.0/es/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net9.0/fi/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "fi"
+          },
+          "lib/net9.0/fr/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net9.0/he/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "he"
+          },
+          "lib/net9.0/hi/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "hi"
+          },
+          "lib/net9.0/hr/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "hr"
+          },
+          "lib/net9.0/hu/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "hu"
+          },
+          "lib/net9.0/id/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "id"
+          },
+          "lib/net9.0/it/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net9.0/ja/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net9.0/ko/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net9.0/ms/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "ms"
+          },
+          "lib/net9.0/nb/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "nb"
+          },
+          "lib/net9.0/nl/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "nl"
+          },
+          "lib/net9.0/pl/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/net9.0/pt-BR/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net9.0/pt/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net9.0/ro/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "ro"
+          },
+          "lib/net9.0/ru/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net9.0/sk/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "sk"
+          },
+          "lib/net9.0/sv/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "sv"
+          },
+          "lib/net9.0/th/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "th"
+          },
+          "lib/net9.0/tr/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net9.0/uk/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "uk"
+          },
+          "lib/net9.0/vi/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "vi"
+          },
+          "lib/net9.0/zh-HK/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "zh-HK"
+          },
+          "lib/net9.0/zh-Hans/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/net9.0/zh-Hant/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        }
+      },
+      "Microsoft.Maui.Controls.Xaml/9.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "9.0.8",
+          "Microsoft.Maui.Controls.Core": "9.0.100",
+          "Microsoft.Maui.Core": "9.0.100"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Maui.Controls.Xaml.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Maui.Controls.Xaml.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Microsoft.Maui.Core/9.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "9.0.8",
+          "Microsoft.Extensions.DependencyInjection": "9.0.8",
+          "Microsoft.Extensions.Logging": "9.0.8",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.8",
+          "Microsoft.Maui.Essentials": "9.0.100",
+          "Microsoft.Maui.Graphics": "9.0.100"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Microsoft.Maui.Core.props": {},
+          "buildTransitive/Microsoft.Maui.Core.targets": {}
+        }
+      },
+      "Microsoft.Maui.Essentials/9.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Graphics": "9.0.100"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Maui.Essentials.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Maui.Essentials.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Microsoft.Maui.Graphics/9.0.100": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/Microsoft.Maui.Graphics.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Maui.Graphics.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Microsoft.Maui.Resizetizer/9.0.100": {
+        "type": "package",
+        "build": {
+          "buildTransitive/Microsoft.Maui.Resizetizer.props": {},
+          "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
+        }
+      },
+      "Refit/8.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Refit.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Refit.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netstandard2.0/refit.props": {},
+          "buildTransitive/netstandard2.0/refit.targets": {}
+        }
+      },
+      "RecipesApp.Client.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        }
+      },
+      "RecipesApp.Client.Repositories/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8",
+          "RecipesApp.Client.Core": "1.0.0",
+          "RecipesApp.Shared": "1.0.0",
+          "Refit": "8.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        }
+      },
+      "RecipesApp.Localization/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        }
+      },
+      "RecipesApp.Localization.Maui/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "9.0.82",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        }
+      },
+      "RecipesApp.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
+        }
+      }
+    },
+    "net9.0/iossimulator-x64": {
+      "CommunityToolkit.Maui/12.2.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "12.2.0",
+          "Microsoft.Maui.Controls": "[9.0.90, 10.0.0)"
+        },
+        "compile": {
+          "lib/net9.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/12.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "[9.0.90, 10.0.0)",
+          "Microsoft.Maui.Essentials": "[9.0.90, 10.0.0)"
+        },
+        "compile": {
+          "lib/net9.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Mvvm/8.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/CommunityToolkit.Mvvm.targets": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration/9.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "9.0.8",
+          "Microsoft.Extensions.Primitives": "9.0.8"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.Configuration.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Configuration.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration.Abstractions/9.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "9.0.8"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.Configuration.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Configuration.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection/9.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.DependencyInjection.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.DependencyInjection.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/9.0.8": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Logging/9.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "9.0.8",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.8",
+          "Microsoft.Extensions.Options": "9.0.8"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Logging.Abstractions/9.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.Logging.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Logging.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/Microsoft.Extensions.Logging.Abstractions.targets": {}
+        }
+      },
+      "Microsoft.Extensions.Logging.Debug/9.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8",
+          "Microsoft.Extensions.Logging": "9.0.8",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.8"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.Logging.Debug.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Logging.Debug.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Options/9.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8",
+          "Microsoft.Extensions.Primitives": "9.0.8"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.Options.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Options.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/Microsoft.Extensions.Options.targets": {}
+        }
+      },
+      "Microsoft.Extensions.Primitives/9.0.8": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.Primitives.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Primitives.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "Microsoft.Maui.Controls/9.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls.Build.Tasks": "9.0.100",
+          "Microsoft.Maui.Controls.Core": "9.0.100",
+          "Microsoft.Maui.Controls.Xaml": "9.0.100",
+          "Microsoft.Maui.Resizetizer": "9.0.100"
+        }
+      },
+      "Microsoft.Maui.Controls.Build.Tasks/9.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls.Core": "9.0.100",
+          "Microsoft.Maui.Controls.Xaml": "9.0.100"
+        },
+        "build": {
+          "buildTransitive/netstandard2.0/Microsoft.Maui.Controls.Build.Tasks.props": {},
+          "buildTransitive/netstandard2.0/Microsoft.Maui.Controls.Build.Tasks.targets": {}
+        }
+      },
+      "Microsoft.Maui.Controls.Compatibility/9.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "9.0.8",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.8",
+          "Microsoft.Maui.Controls.Core": "9.0.100",
+          "Microsoft.Maui.Controls.Xaml": "9.0.100"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Maui.Controls.Compatibility.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Maui.Controls.Compatibility.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Microsoft.Maui.Controls.Core/9.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "9.0.8",
+          "Microsoft.Extensions.DependencyInjection": "9.0.8",
+          "Microsoft.Extensions.Logging": "9.0.8",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.8",
+          "Microsoft.Maui.Core": "9.0.100"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Maui.Controls.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Maui.Controls.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "resource": {
+          "lib/net9.0/ar/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "ar"
+          },
+          "lib/net9.0/ca/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "ca"
+          },
+          "lib/net9.0/cs/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/net9.0/da/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "da"
+          },
+          "lib/net9.0/de/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net9.0/el/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "el"
+          },
+          "lib/net9.0/es/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net9.0/fi/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "fi"
+          },
+          "lib/net9.0/fr/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net9.0/he/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "he"
+          },
+          "lib/net9.0/hi/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "hi"
+          },
+          "lib/net9.0/hr/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "hr"
+          },
+          "lib/net9.0/hu/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "hu"
+          },
+          "lib/net9.0/id/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "id"
+          },
+          "lib/net9.0/it/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net9.0/ja/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net9.0/ko/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net9.0/ms/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "ms"
+          },
+          "lib/net9.0/nb/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "nb"
+          },
+          "lib/net9.0/nl/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "nl"
+          },
+          "lib/net9.0/pl/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/net9.0/pt-BR/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net9.0/pt/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net9.0/ro/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "ro"
+          },
+          "lib/net9.0/ru/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net9.0/sk/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "sk"
+          },
+          "lib/net9.0/sv/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "sv"
+          },
+          "lib/net9.0/th/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "th"
+          },
+          "lib/net9.0/tr/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net9.0/uk/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "uk"
+          },
+          "lib/net9.0/vi/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "vi"
+          },
+          "lib/net9.0/zh-HK/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "zh-HK"
+          },
+          "lib/net9.0/zh-Hans/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/net9.0/zh-Hant/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        }
+      },
+      "Microsoft.Maui.Controls.Xaml/9.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "9.0.8",
+          "Microsoft.Maui.Controls.Core": "9.0.100",
+          "Microsoft.Maui.Core": "9.0.100"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Maui.Controls.Xaml.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Maui.Controls.Xaml.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Microsoft.Maui.Core/9.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "9.0.8",
+          "Microsoft.Extensions.DependencyInjection": "9.0.8",
+          "Microsoft.Extensions.Logging": "9.0.8",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.8",
+          "Microsoft.Maui.Essentials": "9.0.100",
+          "Microsoft.Maui.Graphics": "9.0.100"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Microsoft.Maui.Core.props": {},
+          "buildTransitive/Microsoft.Maui.Core.targets": {}
+        }
+      },
+      "Microsoft.Maui.Essentials/9.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Graphics": "9.0.100"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Maui.Essentials.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Maui.Essentials.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Microsoft.Maui.Graphics/9.0.100": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/Microsoft.Maui.Graphics.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Maui.Graphics.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Microsoft.Maui.Resizetizer/9.0.100": {
+        "type": "package",
+        "build": {
+          "buildTransitive/Microsoft.Maui.Resizetizer.props": {},
+          "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
+        }
+      },
+      "Refit/8.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Refit.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Refit.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netstandard2.0/refit.props": {},
+          "buildTransitive/netstandard2.0/refit.targets": {}
+        }
+      },
+      "RecipesApp.Client.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        }
+      },
+      "RecipesApp.Client.Repositories/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8",
+          "RecipesApp.Client.Core": "1.0.0",
+          "RecipesApp.Shared": "1.0.0",
+          "Refit": "8.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        }
+      },
+      "RecipesApp.Localization/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        }
+      },
+      "RecipesApp.Localization.Maui/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "9.0.82",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        }
+      },
+      "RecipesApp.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
+        }
+      }
+    },
+    "net9.0/maccatalyst-x64": {
+      "CommunityToolkit.Maui/12.2.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "12.2.0",
+          "Microsoft.Maui.Controls": "[9.0.90, 10.0.0)"
+        },
+        "compile": {
+          "lib/net9.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/12.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "[9.0.90, 10.0.0)",
+          "Microsoft.Maui.Essentials": "[9.0.90, 10.0.0)"
+        },
+        "compile": {
+          "lib/net9.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Mvvm/8.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/CommunityToolkit.Mvvm.targets": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration/9.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "9.0.8",
+          "Microsoft.Extensions.Primitives": "9.0.8"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.Configuration.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Configuration.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration.Abstractions/9.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "9.0.8"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.Configuration.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Configuration.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection/9.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.DependencyInjection.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.DependencyInjection.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/9.0.8": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Logging/9.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "9.0.8",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.8",
+          "Microsoft.Extensions.Options": "9.0.8"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Logging.Abstractions/9.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.Logging.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Logging.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/Microsoft.Extensions.Logging.Abstractions.targets": {}
+        }
+      },
+      "Microsoft.Extensions.Logging.Debug/9.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8",
+          "Microsoft.Extensions.Logging": "9.0.8",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.8"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.Logging.Debug.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Logging.Debug.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Options/9.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8",
+          "Microsoft.Extensions.Primitives": "9.0.8"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.Options.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Options.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/Microsoft.Extensions.Options.targets": {}
+        }
+      },
+      "Microsoft.Extensions.Primitives/9.0.8": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.Primitives.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Primitives.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "Microsoft.Maui.Controls/9.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls.Build.Tasks": "9.0.100",
+          "Microsoft.Maui.Controls.Core": "9.0.100",
+          "Microsoft.Maui.Controls.Xaml": "9.0.100",
+          "Microsoft.Maui.Resizetizer": "9.0.100"
+        }
+      },
+      "Microsoft.Maui.Controls.Build.Tasks/9.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls.Core": "9.0.100",
+          "Microsoft.Maui.Controls.Xaml": "9.0.100"
+        },
+        "build": {
+          "buildTransitive/netstandard2.0/Microsoft.Maui.Controls.Build.Tasks.props": {},
+          "buildTransitive/netstandard2.0/Microsoft.Maui.Controls.Build.Tasks.targets": {}
+        }
+      },
+      "Microsoft.Maui.Controls.Compatibility/9.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "9.0.8",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.8",
+          "Microsoft.Maui.Controls.Core": "9.0.100",
+          "Microsoft.Maui.Controls.Xaml": "9.0.100"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Maui.Controls.Compatibility.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Maui.Controls.Compatibility.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Microsoft.Maui.Controls.Core/9.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "9.0.8",
+          "Microsoft.Extensions.DependencyInjection": "9.0.8",
+          "Microsoft.Extensions.Logging": "9.0.8",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.8",
+          "Microsoft.Maui.Core": "9.0.100"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Maui.Controls.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Maui.Controls.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "resource": {
+          "lib/net9.0/ar/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "ar"
+          },
+          "lib/net9.0/ca/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "ca"
+          },
+          "lib/net9.0/cs/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/net9.0/da/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "da"
+          },
+          "lib/net9.0/de/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net9.0/el/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "el"
+          },
+          "lib/net9.0/es/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net9.0/fi/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "fi"
+          },
+          "lib/net9.0/fr/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net9.0/he/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "he"
+          },
+          "lib/net9.0/hi/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "hi"
+          },
+          "lib/net9.0/hr/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "hr"
+          },
+          "lib/net9.0/hu/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "hu"
+          },
+          "lib/net9.0/id/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "id"
+          },
+          "lib/net9.0/it/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net9.0/ja/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net9.0/ko/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net9.0/ms/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "ms"
+          },
+          "lib/net9.0/nb/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "nb"
+          },
+          "lib/net9.0/nl/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "nl"
+          },
+          "lib/net9.0/pl/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/net9.0/pt-BR/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net9.0/pt/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net9.0/ro/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "ro"
+          },
+          "lib/net9.0/ru/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net9.0/sk/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "sk"
+          },
+          "lib/net9.0/sv/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "sv"
+          },
+          "lib/net9.0/th/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "th"
+          },
+          "lib/net9.0/tr/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net9.0/uk/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "uk"
+          },
+          "lib/net9.0/vi/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "vi"
+          },
+          "lib/net9.0/zh-HK/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "zh-HK"
+          },
+          "lib/net9.0/zh-Hans/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/net9.0/zh-Hant/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        }
+      },
+      "Microsoft.Maui.Controls.Xaml/9.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "9.0.8",
+          "Microsoft.Maui.Controls.Core": "9.0.100",
+          "Microsoft.Maui.Core": "9.0.100"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Maui.Controls.Xaml.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Maui.Controls.Xaml.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Microsoft.Maui.Core/9.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "9.0.8",
+          "Microsoft.Extensions.DependencyInjection": "9.0.8",
+          "Microsoft.Extensions.Logging": "9.0.8",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.8",
+          "Microsoft.Maui.Essentials": "9.0.100",
+          "Microsoft.Maui.Graphics": "9.0.100"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Microsoft.Maui.Core.props": {},
+          "buildTransitive/Microsoft.Maui.Core.targets": {}
+        }
+      },
+      "Microsoft.Maui.Essentials/9.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Graphics": "9.0.100"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Maui.Essentials.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Maui.Essentials.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Microsoft.Maui.Graphics/9.0.100": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/Microsoft.Maui.Graphics.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Maui.Graphics.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Microsoft.Maui.Resizetizer/9.0.100": {
+        "type": "package",
+        "build": {
+          "buildTransitive/Microsoft.Maui.Resizetizer.props": {},
+          "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
+        }
+      },
+      "Refit/8.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Refit.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Refit.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netstandard2.0/refit.props": {},
+          "buildTransitive/netstandard2.0/refit.targets": {}
+        }
+      },
+      "RecipesApp.Client.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        }
+      },
+      "RecipesApp.Client.Repositories/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8",
+          "RecipesApp.Client.Core": "1.0.0",
+          "RecipesApp.Shared": "1.0.0",
+          "Refit": "8.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        }
+      },
+      "RecipesApp.Localization/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        }
+      },
+      "RecipesApp.Localization.Maui/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "9.0.82",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        }
+      },
+      "RecipesApp.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
+        }
+      }
+    },
+    "net9.0/win10-x64": {
+      "CommunityToolkit.Maui/12.2.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "12.2.0",
+          "Microsoft.Maui.Controls": "[9.0.90, 10.0.0)"
+        },
+        "compile": {
+          "lib/net9.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/12.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "[9.0.90, 10.0.0)",
+          "Microsoft.Maui.Essentials": "[9.0.90, 10.0.0)"
+        },
+        "compile": {
+          "lib/net9.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Mvvm/8.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/CommunityToolkit.Mvvm.targets": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration/9.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "9.0.8",
+          "Microsoft.Extensions.Primitives": "9.0.8"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.Configuration.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Configuration.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration.Abstractions/9.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "9.0.8"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.Configuration.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Configuration.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection/9.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.DependencyInjection.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.DependencyInjection.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/9.0.8": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Logging/9.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "9.0.8",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.8",
+          "Microsoft.Extensions.Options": "9.0.8"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Logging.Abstractions/9.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.Logging.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Logging.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/Microsoft.Extensions.Logging.Abstractions.targets": {}
+        }
+      },
+      "Microsoft.Extensions.Logging.Debug/9.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8",
+          "Microsoft.Extensions.Logging": "9.0.8",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.8"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.Logging.Debug.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Logging.Debug.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Options/9.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8",
+          "Microsoft.Extensions.Primitives": "9.0.8"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.Options.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Options.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/Microsoft.Extensions.Options.targets": {}
+        }
+      },
+      "Microsoft.Extensions.Primitives/9.0.8": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.Primitives.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Primitives.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "Microsoft.Maui.Controls/9.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls.Build.Tasks": "9.0.100",
+          "Microsoft.Maui.Controls.Core": "9.0.100",
+          "Microsoft.Maui.Controls.Xaml": "9.0.100",
+          "Microsoft.Maui.Resizetizer": "9.0.100"
+        }
+      },
+      "Microsoft.Maui.Controls.Build.Tasks/9.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls.Core": "9.0.100",
+          "Microsoft.Maui.Controls.Xaml": "9.0.100"
+        },
+        "build": {
+          "buildTransitive/netstandard2.0/Microsoft.Maui.Controls.Build.Tasks.props": {},
+          "buildTransitive/netstandard2.0/Microsoft.Maui.Controls.Build.Tasks.targets": {}
+        }
+      },
+      "Microsoft.Maui.Controls.Compatibility/9.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "9.0.8",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.8",
+          "Microsoft.Maui.Controls.Core": "9.0.100",
+          "Microsoft.Maui.Controls.Xaml": "9.0.100"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Maui.Controls.Compatibility.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Maui.Controls.Compatibility.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Microsoft.Maui.Controls.Core/9.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "9.0.8",
+          "Microsoft.Extensions.DependencyInjection": "9.0.8",
+          "Microsoft.Extensions.Logging": "9.0.8",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.8",
+          "Microsoft.Maui.Core": "9.0.100"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Maui.Controls.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Maui.Controls.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "resource": {
+          "lib/net9.0/ar/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "ar"
+          },
+          "lib/net9.0/ca/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "ca"
+          },
+          "lib/net9.0/cs/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/net9.0/da/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "da"
+          },
+          "lib/net9.0/de/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net9.0/el/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "el"
+          },
+          "lib/net9.0/es/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net9.0/fi/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "fi"
+          },
+          "lib/net9.0/fr/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net9.0/he/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "he"
+          },
+          "lib/net9.0/hi/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "hi"
+          },
+          "lib/net9.0/hr/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "hr"
+          },
+          "lib/net9.0/hu/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "hu"
+          },
+          "lib/net9.0/id/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "id"
+          },
+          "lib/net9.0/it/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net9.0/ja/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net9.0/ko/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net9.0/ms/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "ms"
+          },
+          "lib/net9.0/nb/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "nb"
+          },
+          "lib/net9.0/nl/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "nl"
+          },
+          "lib/net9.0/pl/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/net9.0/pt-BR/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net9.0/pt/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net9.0/ro/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "ro"
+          },
+          "lib/net9.0/ru/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net9.0/sk/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "sk"
+          },
+          "lib/net9.0/sv/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "sv"
+          },
+          "lib/net9.0/th/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "th"
+          },
+          "lib/net9.0/tr/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net9.0/uk/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "uk"
+          },
+          "lib/net9.0/vi/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "vi"
+          },
+          "lib/net9.0/zh-HK/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "zh-HK"
+          },
+          "lib/net9.0/zh-Hans/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/net9.0/zh-Hant/Microsoft.Maui.Controls.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        }
+      },
+      "Microsoft.Maui.Controls.Xaml/9.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "9.0.8",
+          "Microsoft.Maui.Controls.Core": "9.0.100",
+          "Microsoft.Maui.Core": "9.0.100"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Maui.Controls.Xaml.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Maui.Controls.Xaml.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Microsoft.Maui.Core/9.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "9.0.8",
+          "Microsoft.Extensions.DependencyInjection": "9.0.8",
+          "Microsoft.Extensions.Logging": "9.0.8",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.8",
+          "Microsoft.Maui.Essentials": "9.0.100",
+          "Microsoft.Maui.Graphics": "9.0.100"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Microsoft.Maui.Core.props": {},
+          "buildTransitive/Microsoft.Maui.Core.targets": {}
+        }
+      },
+      "Microsoft.Maui.Essentials/9.0.100": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Graphics": "9.0.100"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Maui.Essentials.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Maui.Essentials.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Microsoft.Maui.Graphics/9.0.100": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/Microsoft.Maui.Graphics.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Maui.Graphics.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Microsoft.Maui.Resizetizer/9.0.100": {
+        "type": "package",
+        "build": {
+          "buildTransitive/Microsoft.Maui.Resizetizer.props": {},
+          "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
+        }
+      },
+      "Refit/8.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Refit.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Refit.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netstandard2.0/refit.props": {},
+          "buildTransitive/netstandard2.0/refit.targets": {}
+        }
+      },
+      "RecipesApp.Client.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        }
+      },
+      "RecipesApp.Client.Repositories/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8",
+          "RecipesApp.Client.Core": "1.0.0",
+          "RecipesApp.Shared": "1.0.0",
+          "Refit": "8.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        }
+      },
+      "RecipesApp.Localization/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        }
+      },
+      "RecipesApp.Localization.Maui/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "9.0.82",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        }
+      },
+      "RecipesApp.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
+        }
+      }
+    },
     "net9.0-android35.0": {
       "CommunityToolkit.Maui/12.2.0": {
         "type": "package",
@@ -34,6 +3334,22 @@
           "lib/net9.0-android35.0/CommunityToolkit.Maui.Core.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "CommunityToolkit.Mvvm/8.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/CommunityToolkit.Mvvm.targets": {}
         }
       },
       "GoogleGson/2.13.0.1": {
@@ -2362,6 +5678,74 @@
           "lib/net8.0-android34.0/Xamarin.KotlinX.Serialization.Core.Jvm.dll": {
             "related": ".aar;.pdb;.xml"
           }
+        }
+      },
+      "RecipesApp.Client.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        }
+      },
+      "RecipesApp.Client.Repositories/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8",
+          "RecipesApp.Client.Core": "1.0.0",
+          "RecipesApp.Shared": "1.0.0",
+          "Refit": "8.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        }
+      },
+      "RecipesApp.Localization/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        }
+      },
+      "RecipesApp.Localization.Maui/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "9.0.82",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        }
+      },
+      "RecipesApp.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
         }
       }
     },
@@ -2400,6 +5784,22 @@
           }
         }
       },
+      "CommunityToolkit.Mvvm/8.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/CommunityToolkit.Mvvm.targets": {}
+        }
+      },
       "GoogleGson/2.13.0.1": {
         "type": "package",
         "dependencies": {
@@ -4726,6 +8126,74 @@
           "lib/net8.0-android34.0/Xamarin.KotlinX.Serialization.Core.Jvm.dll": {
             "related": ".aar;.pdb;.xml"
           }
+        }
+      },
+      "RecipesApp.Client.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        }
+      },
+      "RecipesApp.Client.Repositories/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8",
+          "RecipesApp.Client.Core": "1.0.0",
+          "RecipesApp.Shared": "1.0.0",
+          "Refit": "8.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        }
+      },
+      "RecipesApp.Localization/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        }
+      },
+      "RecipesApp.Localization.Maui/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "9.0.82",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        }
+      },
+      "RecipesApp.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
         }
       }
     },
@@ -4764,6 +8232,22 @@
           }
         }
       },
+      "CommunityToolkit.Mvvm/8.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/CommunityToolkit.Mvvm.targets": {}
+        }
+      },
       "GoogleGson/2.13.0.1": {
         "type": "package",
         "dependencies": {
@@ -7090,6 +10574,74 @@
           "lib/net8.0-android34.0/Xamarin.KotlinX.Serialization.Core.Jvm.dll": {
             "related": ".aar;.pdb;.xml"
           }
+        }
+      },
+      "RecipesApp.Client.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        }
+      },
+      "RecipesApp.Client.Repositories/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8",
+          "RecipesApp.Client.Core": "1.0.0",
+          "RecipesApp.Shared": "1.0.0",
+          "Refit": "8.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        }
+      },
+      "RecipesApp.Localization/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        }
+      },
+      "RecipesApp.Localization.Maui/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "9.0.82",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        }
+      },
+      "RecipesApp.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
         }
       }
     },
@@ -7128,6 +10680,22 @@
           }
         }
       },
+      "CommunityToolkit.Mvvm/8.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/CommunityToolkit.Mvvm.targets": {}
+        }
+      },
       "GoogleGson/2.13.0.1": {
         "type": "package",
         "dependencies": {
@@ -9454,6 +13022,74 @@
           "lib/net8.0-android34.0/Xamarin.KotlinX.Serialization.Core.Jvm.dll": {
             "related": ".aar;.pdb;.xml"
           }
+        }
+      },
+      "RecipesApp.Client.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        }
+      },
+      "RecipesApp.Client.Repositories/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8",
+          "RecipesApp.Client.Core": "1.0.0",
+          "RecipesApp.Shared": "1.0.0",
+          "Refit": "8.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        }
+      },
+      "RecipesApp.Localization/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        }
+      },
+      "RecipesApp.Localization.Maui/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "9.0.82",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        }
+      },
+      "RecipesApp.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
         }
       }
     },
@@ -9492,6 +13128,22 @@
           }
         }
       },
+      "CommunityToolkit.Mvvm/8.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/CommunityToolkit.Mvvm.targets": {}
+        }
+      },
       "GoogleGson/2.13.0.1": {
         "type": "package",
         "dependencies": {
@@ -11818,6 +15470,74 @@
           "lib/net8.0-android34.0/Xamarin.KotlinX.Serialization.Core.Jvm.dll": {
             "related": ".aar;.pdb;.xml"
           }
+        }
+      },
+      "RecipesApp.Client.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        }
+      },
+      "RecipesApp.Client.Repositories/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8",
+          "RecipesApp.Client.Core": "1.0.0",
+          "RecipesApp.Shared": "1.0.0",
+          "Refit": "8.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        }
+      },
+      "RecipesApp.Localization/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        }
+      },
+      "RecipesApp.Localization.Maui/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "9.0.82",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        }
+      },
+      "RecipesApp.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
         }
       }
     },
@@ -11856,6 +15576,22 @@
           }
         }
       },
+      "CommunityToolkit.Mvvm/8.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/CommunityToolkit.Mvvm.targets": {}
+        }
+      },
       "GoogleGson/2.13.0.1": {
         "type": "package",
         "dependencies": {
@@ -14183,6 +17919,74 @@
             "related": ".aar;.pdb;.xml"
           }
         }
+      },
+      "RecipesApp.Client.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        }
+      },
+      "RecipesApp.Client.Repositories/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8",
+          "RecipesApp.Client.Core": "1.0.0",
+          "RecipesApp.Shared": "1.0.0",
+          "Refit": "8.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        }
+      },
+      "RecipesApp.Localization/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        }
+      },
+      "RecipesApp.Localization.Maui/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "9.0.82",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        }
+      },
+      "RecipesApp.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
+        }
       }
     },
     "net9.0-ios18.5": {
@@ -14218,6 +18022,22 @@
           "lib/net9.0-ios18.0/CommunityToolkit.Maui.Core.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "CommunityToolkit.Mvvm/8.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/CommunityToolkit.Mvvm.targets": {}
         }
       },
       "Microsoft.Extensions.Configuration/9.0.8": {
@@ -14654,6 +18474,74 @@
         "build": {
           "buildTransitive/netstandard2.0/refit.props": {},
           "buildTransitive/netstandard2.0/refit.targets": {}
+        }
+      },
+      "RecipesApp.Client.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        }
+      },
+      "RecipesApp.Client.Repositories/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8",
+          "RecipesApp.Client.Core": "1.0.0",
+          "RecipesApp.Shared": "1.0.0",
+          "Refit": "8.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        }
+      },
+      "RecipesApp.Localization/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        }
+      },
+      "RecipesApp.Localization.Maui/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "9.0.82",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        }
+      },
+      "RecipesApp.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
         }
       }
     },
@@ -14692,6 +18580,22 @@
           }
         }
       },
+      "CommunityToolkit.Mvvm/8.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/CommunityToolkit.Mvvm.targets": {}
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.8": {
         "type": "package",
         "dependencies": {
@@ -15126,6 +19030,74 @@
         "build": {
           "buildTransitive/netstandard2.0/refit.props": {},
           "buildTransitive/netstandard2.0/refit.targets": {}
+        }
+      },
+      "RecipesApp.Client.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        }
+      },
+      "RecipesApp.Client.Repositories/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8",
+          "RecipesApp.Client.Core": "1.0.0",
+          "RecipesApp.Shared": "1.0.0",
+          "Refit": "8.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        }
+      },
+      "RecipesApp.Localization/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        }
+      },
+      "RecipesApp.Localization.Maui/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "9.0.82",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        }
+      },
+      "RecipesApp.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
         }
       }
     },
@@ -15164,6 +19136,22 @@
           }
         }
       },
+      "CommunityToolkit.Mvvm/8.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/CommunityToolkit.Mvvm.targets": {}
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.8": {
         "type": "package",
         "dependencies": {
@@ -15598,6 +19586,74 @@
         "build": {
           "buildTransitive/netstandard2.0/refit.props": {},
           "buildTransitive/netstandard2.0/refit.targets": {}
+        }
+      },
+      "RecipesApp.Client.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        }
+      },
+      "RecipesApp.Client.Repositories/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8",
+          "RecipesApp.Client.Core": "1.0.0",
+          "RecipesApp.Shared": "1.0.0",
+          "Refit": "8.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        }
+      },
+      "RecipesApp.Localization/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        }
+      },
+      "RecipesApp.Localization.Maui/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "9.0.82",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        }
+      },
+      "RecipesApp.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
         }
       }
     },
@@ -15636,6 +19692,22 @@
           }
         }
       },
+      "CommunityToolkit.Mvvm/8.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/CommunityToolkit.Mvvm.targets": {}
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.8": {
         "type": "package",
         "dependencies": {
@@ -16070,6 +20142,74 @@
         "build": {
           "buildTransitive/netstandard2.0/refit.props": {},
           "buildTransitive/netstandard2.0/refit.targets": {}
+        }
+      },
+      "RecipesApp.Client.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        }
+      },
+      "RecipesApp.Client.Repositories/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8",
+          "RecipesApp.Client.Core": "1.0.0",
+          "RecipesApp.Shared": "1.0.0",
+          "Refit": "8.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        }
+      },
+      "RecipesApp.Localization/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        }
+      },
+      "RecipesApp.Localization.Maui/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "9.0.82",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        }
+      },
+      "RecipesApp.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
         }
       }
     },
@@ -16108,6 +20248,22 @@
           }
         }
       },
+      "CommunityToolkit.Mvvm/8.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/CommunityToolkit.Mvvm.targets": {}
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.8": {
         "type": "package",
         "dependencies": {
@@ -16542,6 +20698,74 @@
         "build": {
           "buildTransitive/netstandard2.0/refit.props": {},
           "buildTransitive/netstandard2.0/refit.targets": {}
+        }
+      },
+      "RecipesApp.Client.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        }
+      },
+      "RecipesApp.Client.Repositories/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8",
+          "RecipesApp.Client.Core": "1.0.0",
+          "RecipesApp.Shared": "1.0.0",
+          "Refit": "8.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        }
+      },
+      "RecipesApp.Localization/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        }
+      },
+      "RecipesApp.Localization.Maui/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "9.0.82",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        }
+      },
+      "RecipesApp.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
         }
       }
     },
@@ -16580,6 +20804,22 @@
           }
         }
       },
+      "CommunityToolkit.Mvvm/8.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/CommunityToolkit.Mvvm.targets": {}
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.8": {
         "type": "package",
         "dependencies": {
@@ -17015,6 +21255,74 @@
           "buildTransitive/netstandard2.0/refit.props": {},
           "buildTransitive/netstandard2.0/refit.targets": {}
         }
+      },
+      "RecipesApp.Client.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        }
+      },
+      "RecipesApp.Client.Repositories/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8",
+          "RecipesApp.Client.Core": "1.0.0",
+          "RecipesApp.Shared": "1.0.0",
+          "Refit": "8.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        }
+      },
+      "RecipesApp.Localization/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        }
+      },
+      "RecipesApp.Localization.Maui/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "9.0.82",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        }
+      },
+      "RecipesApp.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
+        }
       }
     },
     "net9.0-maccatalyst18.5": {
@@ -17050,6 +21358,22 @@
           "lib/net9.0-maccatalyst18.0/CommunityToolkit.Maui.Core.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "CommunityToolkit.Mvvm/8.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/CommunityToolkit.Mvvm.targets": {}
         }
       },
       "Microsoft.Extensions.Configuration/9.0.8": {
@@ -17486,6 +21810,74 @@
         "build": {
           "buildTransitive/netstandard2.0/refit.props": {},
           "buildTransitive/netstandard2.0/refit.targets": {}
+        }
+      },
+      "RecipesApp.Client.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        }
+      },
+      "RecipesApp.Client.Repositories/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8",
+          "RecipesApp.Client.Core": "1.0.0",
+          "RecipesApp.Shared": "1.0.0",
+          "Refit": "8.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        }
+      },
+      "RecipesApp.Localization/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        }
+      },
+      "RecipesApp.Localization.Maui/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "9.0.82",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        }
+      },
+      "RecipesApp.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
         }
       }
     },
@@ -17524,6 +21916,22 @@
           }
         }
       },
+      "CommunityToolkit.Mvvm/8.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/CommunityToolkit.Mvvm.targets": {}
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.8": {
         "type": "package",
         "dependencies": {
@@ -17958,6 +22366,74 @@
         "build": {
           "buildTransitive/netstandard2.0/refit.props": {},
           "buildTransitive/netstandard2.0/refit.targets": {}
+        }
+      },
+      "RecipesApp.Client.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        }
+      },
+      "RecipesApp.Client.Repositories/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8",
+          "RecipesApp.Client.Core": "1.0.0",
+          "RecipesApp.Shared": "1.0.0",
+          "Refit": "8.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        }
+      },
+      "RecipesApp.Localization/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        }
+      },
+      "RecipesApp.Localization.Maui/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "9.0.82",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        }
+      },
+      "RecipesApp.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
         }
       }
     },
@@ -17996,6 +22472,22 @@
           }
         }
       },
+      "CommunityToolkit.Mvvm/8.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/CommunityToolkit.Mvvm.targets": {}
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.8": {
         "type": "package",
         "dependencies": {
@@ -18430,6 +22922,74 @@
         "build": {
           "buildTransitive/netstandard2.0/refit.props": {},
           "buildTransitive/netstandard2.0/refit.targets": {}
+        }
+      },
+      "RecipesApp.Client.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        }
+      },
+      "RecipesApp.Client.Repositories/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8",
+          "RecipesApp.Client.Core": "1.0.0",
+          "RecipesApp.Shared": "1.0.0",
+          "Refit": "8.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        }
+      },
+      "RecipesApp.Localization/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        }
+      },
+      "RecipesApp.Localization.Maui/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "9.0.82",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        }
+      },
+      "RecipesApp.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
         }
       }
     },
@@ -18468,6 +23028,22 @@
           }
         }
       },
+      "CommunityToolkit.Mvvm/8.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/CommunityToolkit.Mvvm.targets": {}
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.8": {
         "type": "package",
         "dependencies": {
@@ -18902,6 +23478,74 @@
         "build": {
           "buildTransitive/netstandard2.0/refit.props": {},
           "buildTransitive/netstandard2.0/refit.targets": {}
+        }
+      },
+      "RecipesApp.Client.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        }
+      },
+      "RecipesApp.Client.Repositories/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8",
+          "RecipesApp.Client.Core": "1.0.0",
+          "RecipesApp.Shared": "1.0.0",
+          "Refit": "8.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        }
+      },
+      "RecipesApp.Localization/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        }
+      },
+      "RecipesApp.Localization.Maui/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "9.0.82",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        }
+      },
+      "RecipesApp.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
         }
       }
     },
@@ -18940,6 +23584,22 @@
           }
         }
       },
+      "CommunityToolkit.Mvvm/8.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/CommunityToolkit.Mvvm.targets": {}
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.8": {
         "type": "package",
         "dependencies": {
@@ -19374,6 +24034,74 @@
         "build": {
           "buildTransitive/netstandard2.0/refit.props": {},
           "buildTransitive/netstandard2.0/refit.targets": {}
+        }
+      },
+      "RecipesApp.Client.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        }
+      },
+      "RecipesApp.Client.Repositories/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8",
+          "RecipesApp.Client.Core": "1.0.0",
+          "RecipesApp.Shared": "1.0.0",
+          "Refit": "8.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        }
+      },
+      "RecipesApp.Localization/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        }
+      },
+      "RecipesApp.Localization.Maui/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "9.0.82",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        }
+      },
+      "RecipesApp.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
         }
       }
     },
@@ -19412,6 +24140,22 @@
           }
         }
       },
+      "CommunityToolkit.Mvvm/8.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/CommunityToolkit.Mvvm.targets": {}
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.8": {
         "type": "package",
         "dependencies": {
@@ -19847,6 +24591,74 @@
           "buildTransitive/netstandard2.0/refit.props": {},
           "buildTransitive/netstandard2.0/refit.targets": {}
         }
+      },
+      "RecipesApp.Client.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        }
+      },
+      "RecipesApp.Client.Repositories/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8",
+          "RecipesApp.Client.Core": "1.0.0",
+          "RecipesApp.Shared": "1.0.0",
+          "Refit": "8.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        }
+      },
+      "RecipesApp.Localization/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        }
+      },
+      "RecipesApp.Localization.Maui/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "9.0.82",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        }
+      },
+      "RecipesApp.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
+        }
       }
     },
     "net9.0-windows10.0.19041": {
@@ -19883,6 +24695,22 @@
           "lib/net9.0-windows10.0.19041/CommunityToolkit.Maui.Core.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "CommunityToolkit.Mvvm/8.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-windows10.0.17763/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.17763/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/CommunityToolkit.Mvvm.targets": {}
         }
       },
       "Microsoft.Extensions.Configuration/9.0.8": {
@@ -20592,6 +25420,74 @@
             "rid": "win"
           }
         }
+      },
+      "RecipesApp.Client.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        }
+      },
+      "RecipesApp.Client.Repositories/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8",
+          "RecipesApp.Client.Core": "1.0.0",
+          "RecipesApp.Shared": "1.0.0",
+          "Refit": "8.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        }
+      },
+      "RecipesApp.Localization/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        }
+      },
+      "RecipesApp.Localization.Maui/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "9.0.82",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        }
+      },
+      "RecipesApp.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
+        }
       }
     },
     "net9.0-windows10.0.19041/android-arm64": {
@@ -20628,6 +25524,22 @@
           "lib/net9.0-windows10.0.19041/CommunityToolkit.Maui.Core.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "CommunityToolkit.Mvvm/8.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-windows10.0.17763/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.17763/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/CommunityToolkit.Mvvm.targets": {}
         }
       },
       "Microsoft.Extensions.Configuration/9.0.8": {
@@ -21268,6 +26180,74 @@
         },
         "build": {
           "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "RecipesApp.Client.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        }
+      },
+      "RecipesApp.Client.Repositories/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8",
+          "RecipesApp.Client.Core": "1.0.0",
+          "RecipesApp.Shared": "1.0.0",
+          "Refit": "8.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        }
+      },
+      "RecipesApp.Localization/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        }
+      },
+      "RecipesApp.Localization.Maui/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "9.0.82",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        }
+      },
+      "RecipesApp.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
         }
       }
     },
@@ -21307,6 +26287,22 @@
           }
         }
       },
+      "CommunityToolkit.Mvvm/8.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-windows10.0.17763/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.17763/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/CommunityToolkit.Mvvm.targets": {}
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.8": {
         "type": "package",
         "dependencies": {
@@ -21945,6 +26941,74 @@
         },
         "build": {
           "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "RecipesApp.Client.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        }
+      },
+      "RecipesApp.Client.Repositories/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8",
+          "RecipesApp.Client.Core": "1.0.0",
+          "RecipesApp.Shared": "1.0.0",
+          "Refit": "8.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        }
+      },
+      "RecipesApp.Localization/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        }
+      },
+      "RecipesApp.Localization.Maui/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "9.0.82",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        }
+      },
+      "RecipesApp.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
         }
       }
     },
@@ -21984,6 +27048,22 @@
           }
         }
       },
+      "CommunityToolkit.Mvvm/8.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-windows10.0.17763/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.17763/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/CommunityToolkit.Mvvm.targets": {}
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.8": {
         "type": "package",
         "dependencies": {
@@ -22622,6 +27702,74 @@
         },
         "build": {
           "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "RecipesApp.Client.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        }
+      },
+      "RecipesApp.Client.Repositories/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8",
+          "RecipesApp.Client.Core": "1.0.0",
+          "RecipesApp.Shared": "1.0.0",
+          "Refit": "8.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        }
+      },
+      "RecipesApp.Localization/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        }
+      },
+      "RecipesApp.Localization.Maui/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "9.0.82",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        }
+      },
+      "RecipesApp.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
         }
       }
     },
@@ -22661,6 +27809,22 @@
           }
         }
       },
+      "CommunityToolkit.Mvvm/8.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-windows10.0.17763/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.17763/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/CommunityToolkit.Mvvm.targets": {}
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.8": {
         "type": "package",
         "dependencies": {
@@ -23300,6 +28464,74 @@
         "build": {
           "buildTransitive/net8.0/_._": {}
         }
+      },
+      "RecipesApp.Client.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        }
+      },
+      "RecipesApp.Client.Repositories/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8",
+          "RecipesApp.Client.Core": "1.0.0",
+          "RecipesApp.Shared": "1.0.0",
+          "Refit": "8.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        }
+      },
+      "RecipesApp.Localization/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        }
+      },
+      "RecipesApp.Localization.Maui/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "9.0.82",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        }
+      },
+      "RecipesApp.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
+        }
       }
     },
     "net9.0-windows10.0.19041/win10-x64": {
@@ -23336,6 +28568,22 @@
           "lib/net9.0-windows10.0.19041/CommunityToolkit.Maui.Core.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "CommunityToolkit.Mvvm/8.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-windows10.0.17763/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.17763/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/CommunityToolkit.Mvvm.targets": {}
         }
       },
       "Microsoft.Extensions.Configuration/9.0.8": {
@@ -23987,6 +29235,74 @@
         "build": {
           "buildTransitive/net8.0/_._": {}
         }
+      },
+      "RecipesApp.Client.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Core.dll": {}
+        }
+      },
+      "RecipesApp.Client.Repositories/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8",
+          "RecipesApp.Client.Core": "1.0.0",
+          "RecipesApp.Shared": "1.0.0",
+          "Refit": "8.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Client.Repositories.dll": {}
+        }
+      },
+      "RecipesApp.Localization/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.dll": {}
+        }
+      },
+      "RecipesApp.Localization.Maui/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "9.0.82",
+          "RecipesApp.Localization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Localization.Maui.dll": {}
+        }
+      },
+      "RecipesApp.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RecipesApp.Shared.dll": {}
+        }
       }
     }
   },
@@ -24042,6 +29358,48 @@
         "lib/net9.0-windows10.0.19041/CommunityToolkit.Maui.Core.xml",
         "lib/net9.0/CommunityToolkit.Maui.Core.dll",
         "lib/net9.0/CommunityToolkit.Maui.Core.xml"
+      ]
+    },
+    "CommunityToolkit.Mvvm/8.4.0": {
+      "sha512": "tqVU8yc/ADO9oiTRyTnwhFN68hCwvkliMierptWOudIAvWY1mWCh5VFh+guwHJmpMwfg0J0rY+yyd5Oy7ty9Uw==",
+      "type": "package",
+      "path": "communitytoolkit.mvvm/8.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "License.md",
+        "ThirdPartyNotices.txt",
+        "analyzers/dotnet/roslyn4.0/cs/CommunityToolkit.Mvvm.CodeFixers.dll",
+        "analyzers/dotnet/roslyn4.0/cs/CommunityToolkit.Mvvm.SourceGenerators.dll",
+        "analyzers/dotnet/roslyn4.12/cs/CommunityToolkit.Mvvm.CodeFixers.dll",
+        "analyzers/dotnet/roslyn4.12/cs/CommunityToolkit.Mvvm.SourceGenerators.dll",
+        "analyzers/dotnet/roslyn4.3/cs/CommunityToolkit.Mvvm.CodeFixers.dll",
+        "analyzers/dotnet/roslyn4.3/cs/CommunityToolkit.Mvvm.SourceGenerators.dll",
+        "build/CommunityToolkit.Mvvm.FeatureSwitches.targets",
+        "build/CommunityToolkit.Mvvm.SourceGenerators.targets",
+        "build/CommunityToolkit.Mvvm.Windows.targets",
+        "build/CommunityToolkit.Mvvm.WindowsSdk.targets",
+        "build/CommunityToolkit.Mvvm.targets",
+        "buildTransitive/CommunityToolkit.Mvvm.FeatureSwitches.targets",
+        "buildTransitive/CommunityToolkit.Mvvm.SourceGenerators.targets",
+        "buildTransitive/CommunityToolkit.Mvvm.Windows.targets",
+        "buildTransitive/CommunityToolkit.Mvvm.WindowsSdk.targets",
+        "buildTransitive/CommunityToolkit.Mvvm.targets",
+        "communitytoolkit.mvvm.8.4.0.nupkg.sha512",
+        "communitytoolkit.mvvm.nuspec",
+        "lib/net8.0-windows10.0.17763/CommunityToolkit.Mvvm.dll",
+        "lib/net8.0-windows10.0.17763/CommunityToolkit.Mvvm.pdb",
+        "lib/net8.0-windows10.0.17763/CommunityToolkit.Mvvm.xml",
+        "lib/net8.0/CommunityToolkit.Mvvm.dll",
+        "lib/net8.0/CommunityToolkit.Mvvm.pdb",
+        "lib/net8.0/CommunityToolkit.Mvvm.xml",
+        "lib/netstandard2.0/CommunityToolkit.Mvvm.dll",
+        "lib/netstandard2.0/CommunityToolkit.Mvvm.pdb",
+        "lib/netstandard2.0/CommunityToolkit.Mvvm.xml",
+        "lib/netstandard2.1/CommunityToolkit.Mvvm.dll",
+        "lib/netstandard2.1/CommunityToolkit.Mvvm.pdb",
+        "lib/netstandard2.1/CommunityToolkit.Mvvm.xml"
       ]
     },
     "GoogleGson/2.13.0.1": {
@@ -28052,15 +33410,53 @@
         "xamarin.kotlinx.serialization.core.jvm.1.7.3.4.nupkg.sha512",
         "xamarin.kotlinx.serialization.core.jvm.nuspec"
       ]
+    },
+    "RecipesApp.Client.Core/1.0.0": {
+      "type": "project",
+      "path": "../RecipesApp.Client.Core/RecipesApp.Client.Core.csproj",
+      "msbuildProject": "../RecipesApp.Client.Core/RecipesApp.Client.Core.csproj"
+    },
+    "RecipesApp.Client.Repositories/1.0.0": {
+      "type": "project",
+      "path": "../RecipesApp.Client.Repositories/RecipesApp.Client.Repositories.csproj",
+      "msbuildProject": "../RecipesApp.Client.Repositories/RecipesApp.Client.Repositories.csproj"
+    },
+    "RecipesApp.Localization/1.0.0": {
+      "type": "project",
+      "path": "../RecipesApp.Localization/RecipesApp.Localization.csproj",
+      "msbuildProject": "../RecipesApp.Localization/RecipesApp.Localization.csproj"
+    },
+    "RecipesApp.Localization.Maui/1.0.0": {
+      "type": "project",
+      "path": "../RecipesApp.Localization.Maui/RecipesApp.Localization.Maui.csproj",
+      "msbuildProject": "../RecipesApp.Localization.Maui/RecipesApp.Localization.Maui.csproj"
+    },
+    "RecipesApp.Shared/1.0.0": {
+      "type": "project",
+      "path": "../RecipesApp.Shared/RecipesApp.Shared.csproj",
+      "msbuildProject": "../RecipesApp.Shared/RecipesApp.Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
+    "net9.0": [
+      "CommunityToolkit.Maui >= 12.2.0",
+      "Microsoft.Extensions.Logging.Debug >= 9.0.8",
+      "Microsoft.Maui.Controls >= 9.0.100",
+      "Microsoft.Maui.Controls.Compatibility >= 9.0.100",
+      "RecipesApp.Client.Core >= 1.0.0",
+      "RecipesApp.Client.Repositories >= 1.0.0",
+      "RecipesApp.Localization.Maui >= 1.0.0",
+      "Refit >= 8.0.0"
+    ],
     "net9.0-android35.0": [
       "CommunityToolkit.Maui >= 12.2.0",
       "Microsoft.Extensions.Logging.Debug >= 9.0.8",
       "Microsoft.Maui.Controls >= 9.0.100",
       "Microsoft.Maui.Controls.Compatibility >= 9.0.100",
       "Microsoft.NET.ILLink.Tasks >= 9.0.8",
+      "RecipesApp.Client.Core >= 1.0.0",
+      "RecipesApp.Client.Repositories >= 1.0.0",
+      "RecipesApp.Localization.Maui >= 1.0.0",
       "Refit >= 8.0.0"
     ],
     "net9.0-ios18.5": [
@@ -28069,6 +33465,9 @@
       "Microsoft.Maui.Controls >= 9.0.100",
       "Microsoft.Maui.Controls.Compatibility >= 9.0.100",
       "Microsoft.NET.ILLink.Tasks >= 9.0.8",
+      "RecipesApp.Client.Core >= 1.0.0",
+      "RecipesApp.Client.Repositories >= 1.0.0",
+      "RecipesApp.Localization.Maui >= 1.0.0",
       "Refit >= 8.0.0"
     ],
     "net9.0-maccatalyst18.5": [
@@ -28077,6 +33476,9 @@
       "Microsoft.Maui.Controls >= 9.0.100",
       "Microsoft.Maui.Controls.Compatibility >= 9.0.100",
       "Microsoft.NET.ILLink.Tasks >= 9.0.8",
+      "RecipesApp.Client.Core >= 1.0.0",
+      "RecipesApp.Client.Repositories >= 1.0.0",
+      "RecipesApp.Localization.Maui >= 1.0.0",
       "Refit >= 8.0.0"
     ],
     "net9.0-windows10.0.19041": [
@@ -28084,6 +33486,9 @@
       "Microsoft.Extensions.Logging.Debug >= 9.0.8",
       "Microsoft.Maui.Controls >= 9.0.100",
       "Microsoft.Maui.Controls.Compatibility >= 9.0.100",
+      "RecipesApp.Client.Core >= 1.0.0",
+      "RecipesApp.Client.Repositories >= 1.0.0",
+      "RecipesApp.Localization.Maui >= 1.0.0",
       "Refit >= 8.0.0"
     ]
   },
@@ -28110,6 +33515,7 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
+        "net9.0",
         "net9.0-android",
         "net9.0-ios",
         "net9.0-maccatalyst",
@@ -28121,21 +33527,75 @@
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "projectReferences": {
+            "D:\\Projects2\\RecipesApp\\RecipesApp.Client.Core\\RecipesApp.Client.Core.csproj": {
+              "projectPath": "D:\\Projects2\\RecipesApp\\RecipesApp.Client.Core\\RecipesApp.Client.Core.csproj"
+            },
+            "D:\\Projects2\\RecipesApp\\RecipesApp.Client.Repositories\\RecipesApp.Client.Repositories.csproj": {
+              "projectPath": "D:\\Projects2\\RecipesApp\\RecipesApp.Client.Repositories\\RecipesApp.Client.Repositories.csproj"
+            },
+            "D:\\Projects2\\RecipesApp\\RecipesApp.Localization.Maui\\RecipesApp.Localization.Maui.csproj": {
+              "projectPath": "D:\\Projects2\\RecipesApp\\RecipesApp.Localization.Maui\\RecipesApp.Localization.Maui.csproj"
+            }
+          }
+        },
         "net9.0-android35.0": {
           "targetAlias": "net9.0-android",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Projects2\\RecipesApp\\RecipesApp.Client.Core\\RecipesApp.Client.Core.csproj": {
+              "projectPath": "D:\\Projects2\\RecipesApp\\RecipesApp.Client.Core\\RecipesApp.Client.Core.csproj"
+            },
+            "D:\\Projects2\\RecipesApp\\RecipesApp.Client.Repositories\\RecipesApp.Client.Repositories.csproj": {
+              "projectPath": "D:\\Projects2\\RecipesApp\\RecipesApp.Client.Repositories\\RecipesApp.Client.Repositories.csproj"
+            },
+            "D:\\Projects2\\RecipesApp\\RecipesApp.Localization.Maui\\RecipesApp.Localization.Maui.csproj": {
+              "projectPath": "D:\\Projects2\\RecipesApp\\RecipesApp.Localization.Maui\\RecipesApp.Localization.Maui.csproj"
+            }
+          }
         },
         "net9.0-ios18.5": {
           "targetAlias": "net9.0-ios",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Projects2\\RecipesApp\\RecipesApp.Client.Core\\RecipesApp.Client.Core.csproj": {
+              "projectPath": "D:\\Projects2\\RecipesApp\\RecipesApp.Client.Core\\RecipesApp.Client.Core.csproj"
+            },
+            "D:\\Projects2\\RecipesApp\\RecipesApp.Client.Repositories\\RecipesApp.Client.Repositories.csproj": {
+              "projectPath": "D:\\Projects2\\RecipesApp\\RecipesApp.Client.Repositories\\RecipesApp.Client.Repositories.csproj"
+            },
+            "D:\\Projects2\\RecipesApp\\RecipesApp.Localization.Maui\\RecipesApp.Localization.Maui.csproj": {
+              "projectPath": "D:\\Projects2\\RecipesApp\\RecipesApp.Localization.Maui\\RecipesApp.Localization.Maui.csproj"
+            }
+          }
         },
         "net9.0-maccatalyst18.5": {
           "targetAlias": "net9.0-maccatalyst",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Projects2\\RecipesApp\\RecipesApp.Client.Core\\RecipesApp.Client.Core.csproj": {
+              "projectPath": "D:\\Projects2\\RecipesApp\\RecipesApp.Client.Core\\RecipesApp.Client.Core.csproj"
+            },
+            "D:\\Projects2\\RecipesApp\\RecipesApp.Client.Repositories\\RecipesApp.Client.Repositories.csproj": {
+              "projectPath": "D:\\Projects2\\RecipesApp\\RecipesApp.Client.Repositories\\RecipesApp.Client.Repositories.csproj"
+            },
+            "D:\\Projects2\\RecipesApp\\RecipesApp.Localization.Maui\\RecipesApp.Localization.Maui.csproj": {
+              "projectPath": "D:\\Projects2\\RecipesApp\\RecipesApp.Localization.Maui\\RecipesApp.Localization.Maui.csproj"
+            }
+          }
         },
         "net9.0-windows10.0.19041": {
           "targetAlias": "net9.0-windows10.0.19041.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Projects2\\RecipesApp\\RecipesApp.Client.Core\\RecipesApp.Client.Core.csproj": {
+              "projectPath": "D:\\Projects2\\RecipesApp\\RecipesApp.Client.Core\\RecipesApp.Client.Core.csproj"
+            },
+            "D:\\Projects2\\RecipesApp\\RecipesApp.Client.Repositories\\RecipesApp.Client.Repositories.csproj": {
+              "projectPath": "D:\\Projects2\\RecipesApp\\RecipesApp.Client.Repositories\\RecipesApp.Client.Repositories.csproj"
+            },
+            "D:\\Projects2\\RecipesApp\\RecipesApp.Localization.Maui\\RecipesApp.Localization.Maui.csproj": {
+              "projectPath": "D:\\Projects2\\RecipesApp\\RecipesApp.Localization.Maui\\RecipesApp.Localization.Maui.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -28151,6 +33611,48 @@
       "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
+      "net9.0": {
+        "targetAlias": "net9.0",
+        "dependencies": {
+          "CommunityToolkit.Maui": {
+            "target": "Package",
+            "version": "[12.2.0, )"
+          },
+          "Microsoft.Extensions.Logging.Debug": {
+            "target": "Package",
+            "version": "[9.0.8, )"
+          },
+          "Microsoft.Maui.Controls": {
+            "target": "Package",
+            "version": "[9.0.100, )"
+          },
+          "Microsoft.Maui.Controls.Compatibility": {
+            "target": "Package",
+            "version": "[9.0.100, )"
+          },
+          "Refit": {
+            "target": "Package",
+            "version": "[8.0.0, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+      },
       "net9.0-android35.0": {
         "targetAlias": "net9.0-android",
         "dependencies": {

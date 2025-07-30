@@ -4,8 +4,9 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:vms="clr-namespace:Recipes.Client.Core.ViewModels;assembly=Recipes.Client.Core"
+    xmlns:viewModels="clr-namespace:Recipes.Client.Core.ViewModels;assembly=RecipesApp.Client.Core"
     Title="Pick Language"
-    x:DataType="vms:PickLanguageViewModel"
+    x:DataType="viewModels:PickLanguageViewModel"
     Shell.PresentationMode="ModalAnimated">
     <VerticalStackLayout VerticalOptions="Center">
         <Label HorizontalOptions="Center" Text="Pick your language:" />
