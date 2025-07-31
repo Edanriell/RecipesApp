@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.8"/>
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="9.0.4" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="Properties\launchSettings.json" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\RecipesApp.Shared\RecipesApp.Shared.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="wwwroot\images\caesarsalad.png" />
+        <None Include="wwwroot\images\carbonara.png" />
+        <None Include="wwwroot\images\moules.png" />
+        <None Include="wwwroot\images\stirfry.png" />
+        <None Include="wwwroot\images\waffle.png" />
+    </ItemGroup>
+    
+</Project>
