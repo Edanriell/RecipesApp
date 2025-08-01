@@ -1,14 +1,13 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
+
 <ContentPage
-    x:Class="Recipes.Mobile.AddRatingPage"
+    x:Class="RecipesApp.Mobile.AddRatingPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:annotations="clr-namespace:System.ComponentModel.DataAnnotations;assembly=System.ComponentModel.DataAnnotations"
-    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
-    xmlns:vms="clr-namespace:Recipes.Client.Core.ViewModels;assembly=Recipes.Client.Core"
-    xmlns:viewModels="clr-namespace:Recipes.Client.Core.ViewModels;assembly=RecipesApp.Client.Core"
+    xmlns:vms="clr-namespace:RecipesApp.Client.Core.ViewModels;assembly=RecipesApp.Client.Core"
     Title="Add Rating"
-    x:DataType="viewModels:AddRatingViewModel"
+    x:DataType="vms:AddRatingViewModel"
     Shell.PresentationMode="ModalAnimated">
     <VerticalStackLayout Padding="10">
         <Grid RowDefinitions="Auto, Auto">

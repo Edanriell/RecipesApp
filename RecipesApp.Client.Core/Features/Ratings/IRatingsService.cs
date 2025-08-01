@@ -1,4 +1,4 @@
-﻿namespace Recipes.Client.Core.Features.Ratings;
+﻿namespace RecipesApp.Client.Core.Features.Ratings;
 
 public interface IRatingsService
 {

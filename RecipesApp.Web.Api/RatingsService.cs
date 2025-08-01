@@ -1,8 +1,8 @@
-﻿using Recipes.Shared.Dto;
+﻿using System.Text;
 using System.Text.Json;
-using System.Text;
+using RecipesApp.Shared.Dto;
 
-namespace Recipes.Web.Api;
+namespace RecipesApp.Web.Api;
 
 public class RatingsService
 {
@@ -11,7 +11,8 @@ public class RatingsService
         var ratings = ReadRatingsFromStream();
 
         var recipeRatings = LoadRatings(recipeId);
-        return new RatingsSummaryDto(recipeRatings.Count(), 4, recipeRatings.Sum(r => r.Rating) / recipeRatings.Count());
+        return new RatingsSummaryDto(recipeRatings.Count(), 4,
+            recipeRatings.Sum(r => r.Rating) / recipeRatings.Count());
     }
 
     public RatingDto[] LoadRatings(string recipeId)
@@ -20,13 +21,11 @@ public class RatingsService
         return ratings.Where(r => r.RecipeId == recipeId).ToArray();
     }
 
-    RatingDto[] ReadRatingsFromStream()
+    private RatingDto[] ReadRatingsFromStream()
     {
-        string json = string.Empty;
-        using (StreamReader reader = new StreamReader("ratings.json", Encoding.UTF8))
-        {
-            json = reader.ReadToEnd();
-        }
+        var json = string.Empty;
+        using (var reader = new StreamReader("ratings.json", Encoding.UTF8)) { json = reader.ReadToEnd(); }
+
         var serializeOptions = new JsonSerializerOptions
         {
             PropertyNamingPolicy = JsonNamingPolicy.CamelCase

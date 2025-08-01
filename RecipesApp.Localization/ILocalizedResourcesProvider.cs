@@ -1,13 +1,10 @@
 ﻿using System.Globalization;
 
-namespace Localization;
+namespace RecipesApp.Localization;
 
 public interface ILocalizedResourcesProvider
 {
-    string this[string key]
-    {
-        get;
-    }
+    string this[string key] { get; }
 
     void UpdateCulture(CultureInfo cultureInfo);
 }

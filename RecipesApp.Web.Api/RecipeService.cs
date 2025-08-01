@@ -1,8 +1,8 @@
-﻿using Recipes.Shared.Dto;
+﻿using System.Text;
 using System.Text.Json;
-using System.Text;
+using RecipesApp.Shared.Dto;
 
-namespace Recipes.Web.Api;
+namespace RecipesApp.Web.Api;
 
 public class RecipeService
 {
@@ -14,7 +14,7 @@ public class RecipeService
 
     public RecipeOverviewItemsDto LoadRecipes(int pageSize = 7, int pageIndex = 0)
     {
-        var recipeDetails = (ReadRecipeDetailsFromStream()).ToList();
+        var recipeDetails = ReadRecipeDetailsFromStream().ToList();
 
         var result = new RecipeOverviewItemsDto(recipeDetails.Count, pageSize, pageIndex,
             recipeDetails
@@ -26,14 +26,11 @@ public class RecipeService
         return result;
     }
 
-    RecipeDetailDto[] ReadRecipeDetailsFromStream()
+    private RecipeDetailDto[] ReadRecipeDetailsFromStream()
     {
-        string json = string.Empty;
-        using (StreamReader reader = new StreamReader("recipedetails.json", Encoding.UTF8))
-        {
-            json = reader.ReadToEnd();
-        }
+        var json = string.Empty;
+        using (var reader = new StreamReader("recipedetails.json", Encoding.UTF8)) { json = reader.ReadToEnd(); }
+
         return JsonSerializer.Deserialize<RecipeDetailDto[]>(json) ?? new RecipeDetailDto[0];
     }
-
 }

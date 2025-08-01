@@ -1,4 +1,4 @@
-﻿namespace Recipes.Client.Core.Features.Favorites;
+﻿namespace RecipesApp.Client.Core.Features.Favorites;
 
 public interface IFavoritesService
 {

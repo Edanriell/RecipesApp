@@ -1,16 +1,15 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
+
 <ContentPage
-    x:Class="Recipes.Mobile.RecipesOverviewPage"
+    x:Class="RecipesApp.Mobile.RecipesOverviewPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:controls="clr-namespace:Recipes.Mobile.Controls"
-    xmlns:conv="clr-namespace:Recipes.Mobile.Converters"
+    xmlns:controls="clr-namespace:RecipesApp.Mobile.Controls"
+    xmlns:conv="clr-namespace:RecipesApp.Mobile.Converters"
     Title="Recipes!"
     BackgroundColor="{StaticResource Primary}"
     NavigationPage.HasNavigationBar="False">
     <ContentPage.Resources>
-        <conv:RatingToStarsConverter x:Key="ratingToStarsConverter" />
-        <conv:RatingToColorConverter x:Key="ratingToColorConverter" />
         <conv:DoNothingConverter x:Key="doNothingConverter" />
     </ContentPage.Resources>
     <Grid>

@@ -1,67 +1,21 @@
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
 
-namespace Recipes.Mobile.Controls;
+namespace RecipesApp.Mobile.Controls;
 
 public partial class FavoriteControlTemplated : ContentView
 {
     public static readonly BindableProperty IsFavoriteProperty =
-            BindableProperty.Create(nameof(IsFavorite), typeof(bool),
-                typeof(FavoriteControlTemplated), defaultBindingMode: BindingMode.TwoWay,
-                propertyChanged: OnIsFavoriteChanged);
-
-    private static void OnIsFavoriteChanged(BindableObject bindable, object oldValue, object newValue)
-    => (bindable as FavoriteControlTemplated).AnimateChange();
+        BindableProperty.Create(nameof(IsFavorite), typeof(bool),
+            typeof(FavoriteControlTemplated), defaultBindingMode: BindingMode.TwoWay,
+            propertyChanged: OnIsFavoriteChanged);
 
     public static readonly BindableProperty ToggledCommandProperty =
         BindableProperty.Create(nameof(ToggledCommand),
             typeof(ICommand), typeof(FavoriteControlTemplated),
             propertyChanged: ToggledCommandChanged);
 
-    private static void ToggledCommandChanged(
-        BindableObject bindable, object oldValue, object newValue)
-    {
-        var control = bindable as FavoriteControlTemplated;
-
-        if (oldValue is ICommand oldCommand)
-        {
-            oldCommand.CanExecuteChanged -= control.CanExecuteChanged;
-        }
-
-        if (newValue is ICommand newCommand)
-        {
-            newCommand.CanExecuteChanged += control.CanExecuteChanged;
-        }
-
-        control.UpdateIsInteractive();
-    }
-
-    public bool IsInteractive { get; private set; }
-
-    private void CanExecuteChanged(object sender, EventArgs e)
-        => UpdateIsInteractive();
-
-    private void UpdateIsInteractive()
-    {
-        IsInteractive = IsEnabled
-        && (ToggledCommand?.CanExecute(IsFavorite)
-        ?? false);
-        OnPropertyChanged(nameof(IsInteractive));
-    }
-
-    public bool IsFavorite
-    {
-        get { return (bool)GetValue(IsFavoriteProperty); }
-        set { SetValue(IsFavoriteProperty, value); }
-    }
-
-    public ICommand ToggledCommand
-    {
-        get => (ICommand)GetValue(ToggledCommandProperty);
-        set => SetValue(ToggledCommandProperty, value);
-    }
-
-    VisualElement scalableContent;
+    private VisualElement scalableContent;
 
     public FavoriteControlTemplated()
     {
@@ -73,15 +27,49 @@ public partial class FavoriteControlTemplated : ContentView
         }
     }
 
+    public bool IsInteractive { get; private set; }
+
+    public bool IsFavorite { get => (bool)GetValue(IsFavoriteProperty); set => SetValue(IsFavoriteProperty, value); }
+
+    public ICommand ToggledCommand
+    {
+        get => (ICommand)GetValue(ToggledCommandProperty);
+        set => SetValue(ToggledCommandProperty, value);
+    }
+
+    private static void OnIsFavoriteChanged(BindableObject bindable, object oldValue, object newValue)
+    {
+        (bindable as FavoriteControlTemplated).AnimateChange();
+    }
+
+    private static void ToggledCommandChanged(
+        BindableObject bindable, object oldValue, object newValue)
+    {
+        var control = bindable as FavoriteControlTemplated;
+
+        if (oldValue is ICommand oldCommand) oldCommand.CanExecuteChanged -= control.CanExecuteChanged;
+
+        if (newValue is ICommand newCommand) newCommand.CanExecuteChanged += control.CanExecuteChanged;
+
+        control.UpdateIsInteractive();
+    }
+
+    private void CanExecuteChanged(object sender, EventArgs e) { UpdateIsInteractive(); }
+
+    private void UpdateIsInteractive()
+    {
+        IsInteractive = IsEnabled
+            && (ToggledCommand?.CanExecute(IsFavorite)
+                ?? false);
+        OnPropertyChanged(nameof(IsInteractive));
+    }
+
     protected override void OnPropertyChanged(
         [CallerMemberName] string propertyName = null)
     {
         base.OnPropertyChanged(propertyName);
 
-        if (propertyName == nameof(IsEnabled))
-        {
-            UpdateIsInteractive();
-        }
+        if (propertyName == nameof(IsEnabled)) UpdateIsInteractive();
     }
 
     protected override void OnApplyTemplate()
@@ -89,7 +77,7 @@ public partial class FavoriteControlTemplated : ContentView
         base.OnApplyTemplate();
         scalableContent =
             GetTemplateChild("scalableContent")
-            as VisualElement;
+                as VisualElement;
     }
 
     private void TapGestureRecognizer_Tapped(

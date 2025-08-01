@@ -1,12 +1,12 @@
-using Recipes.Client.Core.ViewModels;
+using RecipesApp.Client.Core.ViewModels;
 
-namespace Recipes.Mobile;
+namespace RecipesApp.Mobile;
 
 public partial class AddRatingPage : ContentPage
 {
-	public AddRatingPage(AddRatingViewModel vm)
-	{
-		InitializeComponent();
-		BindingContext = vm;
-	}
+    public AddRatingPage(AddRatingViewModel vm)
+    {
+        InitializeComponent();
+        BindingContext = vm;
+    }
 }

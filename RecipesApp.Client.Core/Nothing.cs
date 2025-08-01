@@ -1,4 +1,4 @@
-﻿namespace Recipes.Client.Core;
+﻿namespace RecipesApp.Client.Core;
 
 public struct Nothing
 {

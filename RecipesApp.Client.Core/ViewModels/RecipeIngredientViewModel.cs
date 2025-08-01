@@ -1,27 +1,19 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Messaging;
-using Recipes.Client.Core.Messages;
+using RecipesApp.Client.Core.Messages;
 
-namespace Recipes.Client.Core.ViewModels;
+namespace RecipesApp.Client.Core.ViewModels;
 
 public class RecipeIngredientViewModel : ObservableObject
 {
-    readonly int baseServings;
-    readonly double baseAmount;
+    private readonly double baseAmount;
+    private readonly int baseServings;
 
-    public string IngredientName { get; }
-
-    public string? Measurement { get; }
-
-    double? _displayAmount;
-    public double DisplayAmount
-    {
-        get => _displayAmount ?? baseAmount;
-        set => SetProperty(ref _displayAmount, value);
-    }
+    private double? _displayAmount;
 
 
-    public RecipeIngredientViewModel(string ingredientName, 
+    public RecipeIngredientViewModel(
+        string ingredientName,
         double baseAmount, string? measurement = null, int baseServings = 4)
     {
         IngredientName = ingredientName;
@@ -30,10 +22,16 @@ public class RecipeIngredientViewModel : ObservableObject
         this.baseServings = baseServings;
 
         WeakReferenceMessenger.Default
-            .Register<ServingsChangedMessage>(this,  (r, m) => 
-            ((RecipeIngredientViewModel)r)
-            .UpdateServings(m.Value));
+            .Register<ServingsChangedMessage>(this, (r, m) =>
+                ((RecipeIngredientViewModel)r)
+                .UpdateServings(m.Value));
     }
+
+    public string IngredientName { get; }
+
+    public string? Measurement { get; }
+
+    public double DisplayAmount { get => _displayAmount ?? baseAmount; set => SetProperty(ref _displayAmount, value); }
 
     private void UpdateServings(int servings)
     {

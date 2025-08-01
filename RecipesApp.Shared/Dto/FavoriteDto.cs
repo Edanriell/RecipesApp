@@ -1,3 +1,3 @@
-﻿namespace Recipes.Shared.Dto;
+﻿namespace RecipesApp.Shared.Dto;
 
 public record FavoriteDto(string RecipeId);

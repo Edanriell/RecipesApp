@@ -1,6 +1,6 @@
 ﻿using System.Globalization;
 
-namespace Localization;
+namespace RecipesApp.Localization;
 
 public interface ILocalizationManager
 {

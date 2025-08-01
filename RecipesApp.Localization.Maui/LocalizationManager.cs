@@ -1,21 +1,19 @@
 ﻿using System.Globalization;
 
-namespace Localization.Maui;
-
+namespace RecipesApp.Localization.Maui;
 
 public class LocalizationManager : ILocalizationManager
 {
-    readonly ILocalizedResourcesProvider _resourceProvider;
+    private readonly ILocalizedResourcesProvider _resourceProvider;
 
     private CultureInfo currentCulture;
 
-    public LocalizationManager(ILocalizedResourcesProvider resoureProvider)
-    {
-        _resourceProvider = resoureProvider;
-    }
+    public LocalizationManager(ILocalizedResourcesProvider resoureProvider) { _resourceProvider = resoureProvider; }
 
     public void RestorePreviousCulture(CultureInfo defaultCulture = null)
-        => SetCulture(GetUserCulture(defaultCulture));
+    {
+        SetCulture(GetUserCulture(defaultCulture));
+    }
 
     public CultureInfo GetUserCulture(CultureInfo defaultCulture = null)
     {
@@ -23,14 +21,11 @@ public class LocalizationManager : ILocalizationManager
         {
             var culture = Preferences.Default.Get("UserCulture", string.Empty);
             if (string.IsNullOrEmpty(culture))
-            {
                 currentCulture = defaultCulture ?? CultureInfo.CurrentCulture;
-            }
             else
-            {
                 currentCulture = new CultureInfo(culture);
-            }
         }
+
         return currentCulture;
     }
 

@@ -1,14 +1,10 @@
-﻿using Recipes.Client.Core.Navigation;
-
-namespace Recipes.Mobile;
+﻿namespace RecipesApp.Mobile;
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
-	public MainPage()
-	{
-		InitializeComponent();
-	}
+    private int count;
+
+    public MainPage() { InitializeComponent(); }
 
     private void OnCounterClicked(object sender, EventArgs e)
     {
@@ -22,4 +18,3 @@ public partial class MainPage : ContentPage
         SemanticScreenReader.Announce(CounterBtn.Text);
     }
 }
-

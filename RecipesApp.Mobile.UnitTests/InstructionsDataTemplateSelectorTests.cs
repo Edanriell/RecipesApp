@@ -1,11 +1,10 @@
-using Recipes.Client.Core.ViewModels;
-using Recipes.Mobile.TemplateSelectors;
+using RecipesApp.Client.Core.ViewModels;
+using RecipesApp.Mobile.TemplateSelectors;
 
-namespace Recipes.Mobile.UnitTests;
+namespace RecipesApp.Mobile.UnitTests;
 
 public class InstructionsDataTemplateSelectorTests
 {
-
     [Fact]
     public void SelectTemplate_NoteVM_Should_Return_NoteTemplate()
     {

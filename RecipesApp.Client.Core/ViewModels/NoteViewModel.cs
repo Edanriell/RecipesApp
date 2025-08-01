@@ -1,8 +1,8 @@
-﻿namespace Recipes.Client.Core.ViewModels;
+﻿namespace RecipesApp.Client.Core.ViewModels;
 
 public class NoteViewModel : InstructionBaseViewModel
 {
+    public NoteViewModel(string note) { Note = note; }
+
     public string Note { get; }
-    public NoteViewModel(string note)
-        => Note = note;
 }

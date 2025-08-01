@@ -1,8 +1,8 @@
-﻿using Recipes.Client.Core;
-using Recipes.Shared.Dto;
+﻿using RecipesApp.Client.Core;
+using RecipesApp.Shared.Dto;
 using Refit;
 
-namespace Recipes.Mobile.Repositories;
+namespace RecipesApp.Client.Repositories.Api;
 
 public interface IFavoritesApi
 {

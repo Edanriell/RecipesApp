@@ -1,4 +1,4 @@
-﻿namespace Recipes.Mobile.Misc;
+﻿namespace RecipesApp.Mobile.Misc;
 
 internal class HttpsClientHandlerService
 {

@@ -1,12 +1,12 @@
 ﻿using System.Globalization;
 
-namespace Recipes.Mobile.Converters;
+namespace RecipesApp.Mobile.Converters;
 
 public class RatingAndReviewsToColorConverter : IMultiValueConverter
 {
     public object Convert(object[] values, Type targetType, object parameter, CultureInfo culture)
     {
-        bool isBackground = parameter is string param
+        var isBackground = parameter is string param
             && param.ToLower() == "background";
 
         var hex = isBackground ? "#F2F2F2" : "#EBEBEB";
@@ -14,9 +14,7 @@ public class RatingAndReviewsToColorConverter : IMultiValueConverter
         if (values.Count() == 2
             && values[0] is int reviewCount
             && values[1] is double rating)
-        {
             if (reviewCount >= 3)
-            {
                 hex = rating switch
                 {
                     double r when r > 0 && r < 1.4 => isBackground ? "#E0F7FA" : "#ADD8E6",
@@ -25,8 +23,7 @@ public class RatingAndReviewsToColorConverter : IMultiValueConverter
                     double r when r <= 4.0 => isBackground ? "#FFF9D6" : "#FFD700",
                     _ => null
                 };
-            }
-        }
+
         return hex is null ? null : Color.FromArgb(hex);
     }
 

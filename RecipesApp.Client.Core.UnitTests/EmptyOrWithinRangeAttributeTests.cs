@@ -1,90 +1,89 @@
 using Bogus;
-using Recipes.Client.Core.Validation;
+using RecipesApp.Client.Core.Validation;
 
-namespace Recipes.Client.Core.UnitTests
+namespace RecipesApp.Client.Core.UnitTests;
+
+public class EmptyOrWithinRangeAttributeTests
 {
-    public class EmptyOrWithinRangeAttributeTests
+    private const int MinValueStart = 5;
+    private const int MinValueEnd = 10;
+    private const int MaxValueStart = 11;
+    private const int MaxValueEnd = 15;
+
+    private readonly EmptyOrWithinRangeAttribute sut;
+
+    public EmptyOrWithinRangeAttributeTests()
     {
-        const int MinValueStart = 5;
-        const int MinValueEnd = 10;
-        const int MaxValueStart = 11;
-        const int MaxValueEnd = 15;
+        sut = new Faker<EmptyOrWithinRangeAttribute>()
+            .RuleFor(r => r.MinLength, f => f.Random.Int(MinValueStart, MinValueEnd))
+            .RuleFor(r => r.MaxLength, f => f.Random.Int(MaxValueStart, MaxValueEnd))
+            .Generate();
+    }
 
-        readonly EmptyOrWithinRangeAttribute sut;
+    [Fact]
+    public void Value_WithinRange_IsValid()
+    {
+        //Arrange
+        var input = new Faker().Random.String2(
+            sut.MinLength, sut.MaxLength);
 
-        public EmptyOrWithinRangeAttributeTests()
-        {
-            sut = new Faker<EmptyOrWithinRangeAttribute>()
-                .RuleFor(r => r.MinLength, f => f.Random.Int(MinValueStart, MinValueEnd))
-                .RuleFor(r => r.MaxLength, f => f.Random.Int(MaxValueStart, MaxValueEnd))
-                .Generate();
-        }
+        //Act
+        var isValid = sut.IsValid(input);
 
-        [Fact]
-        public void Value_WithinRange_IsValid()
-        {
-            //Arrange
-            var input = new Faker().Random.String2(
-                sut.MinLength, sut.MaxLength);
+        //Assert
+        Assert.True(isValid);
+    }
 
-            //Act
-            var isValid = sut.IsValid(input);
+    [Fact]
+    public void Value_TooShort_IsNotValid()
+    {
+        //Arrange
+        var input = new Faker().Random.String2(
+            1, MinValueStart - 1);
 
-            //Assert
-            Assert.True(isValid);
-        }
+        //Act
+        var isValid = sut.IsValid(input);
 
-        [Fact]
-        public void Value_TooShort_IsNotValid()
-        {
-            //Arrange
-            var input = new Faker().Random.String2(
-                1, MinValueStart - 1);
+        //Assert
+        Assert.False(isValid);
+    }
 
-            //Act
-            var isValid = sut.IsValid(input);
+    [Fact]
+    public void Value_TooLong_IsNotValid()
+    {
+        //Arrange
+        var input = new Faker().Random.String2(MaxValueEnd + 1, MaxValueEnd + 10);
 
-            //Assert
-            Assert.False(isValid);
-        }
+        //Act
+        var isValid = sut.IsValid(input);
 
-        [Fact]
-        public void Value_TooLong_IsNotValid()
-        {
-            //Arrange
-            var input = new Faker().Random.String2(MaxValueEnd + 1, MaxValueEnd + 10);
+        //Assert
+        Assert.False(isValid);
+    }
 
-            //Act
-            var isValid = sut.IsValid(input);
+    [Fact]
+    public void Value_Emtpy_IsValid()
+    {
+        //Arrange
+        var input = string.Empty;
 
-            //Assert
-            Assert.False(isValid);
-        }
+        //Act
+        var isValid = sut.IsValid(input);
 
-        [Fact]
-        public void Value_Emtpy_IsValid()
-        {
-            //Arrange
-            var input = string.Empty;
+        //Assert
+        Assert.True(isValid);
+    }
 
-            //Act
-            var isValid = sut.IsValid(input);
+    [Fact]
+    public void ValueNull_IsNotValid()
+    {
+        //Arrange
+        string? input = null;
 
-            //Assert
-            Assert.True(isValid);
-        }
+        //Act
+        var isValid = sut.IsValid(input);
 
-        [Fact]
-        public void ValueNull_IsNotValid()
-        {
-            //Arrange
-            string? input = null;
-
-            //Act
-            var isValid = sut.IsValid(input);
-
-            //Assert
-            Assert.False(isValid);
-        }
+        //Assert
+        Assert.False(isValid);
     }
 }

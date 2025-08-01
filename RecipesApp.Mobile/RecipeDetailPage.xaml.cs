@@ -1,6 +1,7 @@
-using Recipes.Client.Core.ViewModels;
+using RecipesApp.Client.Core.ViewModels;
 
-namespace Recipes.Mobile;
+namespace RecipesApp.Mobile;
+
 public partial class RecipeDetailPage : ContentPage
 {
     public RecipeDetailPage(RecipeDetailViewModel viewModel)

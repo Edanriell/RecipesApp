@@ -1,3 +1,5 @@
-﻿namespace Recipes.Client.Core.ViewModels;
+﻿namespace RecipesApp.Client.Core.ViewModels;
 
-public class InstructionBaseViewModel { }
+public class InstructionBaseViewModel
+{
+}

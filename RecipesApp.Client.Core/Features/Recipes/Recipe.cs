@@ -1,4 +1,4 @@
-﻿namespace Recipes.Client.Core.Features.Recipes;
+﻿namespace RecipesApp.Client.Core.Features.Recipes;
 
 public record RecipeDetail(
     string Id,

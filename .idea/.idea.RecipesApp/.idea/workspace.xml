@@ -8,6 +8,7 @@
     <projectFile kind="XamarinIOS">RecipesApp.Mobile/RecipesApp.Mobile.csproj</projectFile>
     <projectFile kind="XamarinMacOS">RecipesApp.Mobile/RecipesApp.Mobile.csproj</projectFile>
     <projectFile profileName="Windows Machine">RecipesApp.Mobile/RecipesApp.Mobile.csproj</projectFile>
+    <projectFile profileName="IIS Express">RecipesApp.Web.Api/RecipesApp.Web.Api.csproj</projectFile>
     <projectFile profileName="http">RecipesApp.Web.Api/RecipesApp.Web.Api.csproj</projectFile>
     <projectFile profileName="https">RecipesApp.Web.Api/RecipesApp.Web.Api.csproj</projectFile>
   </component>
@@ -16,83 +17,124 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f8324e9-0ef4-44dc-bfec-2ad6aec8c428" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/RecipesApp.Web.Api/FavoritesDataStore.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecipesApp.Web.Api/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecipesApp.Web.Api/Properties/launchSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecipesApp.Web.Api/RatingsService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecipesApp.Web.Api/RecipeService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecipesApp.Web.Api/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecipesApp.Web.Api/appsettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecipesApp.Web.Api/ratings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecipesApp.Web.Api/recipedetails.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RecipesApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RecipesApp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Core.UnitTests/obj/Debug/net9.0/RecipesApp.Client.Core.UnitTests.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Core.UnitTests/obj/Debug/net9.0/RecipesApp.Client.Core.UnitTests.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Core.UnitTests/obj/Debug/net9.0/RecipesApp.Client.Core.UnitTests.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Core.UnitTests/obj/Debug/net9.0/RecipesApp.Client.Core.UnitTests.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Core.UnitTests/obj/Debug/net9.0/RecipesApp.Client.Core.UnitTests.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Core.UnitTests/obj/Debug/net9.0/RecipesApp.Client.Core.UnitTests.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Core.UnitTests/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Core.UnitTests/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Core.UnitTests/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Core.UnitTests/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Core/obj/Debug/net9.0/RecipesApp.Client.Core.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/obj/Debug/net9.0/RecipesApp.Client.Core.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Core/obj/Debug/net9.0/RecipesApp.Client.Core.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/obj/Debug/net9.0/RecipesApp.Client.Core.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Core/obj/Debug/net9.0/RecipesApp.Client.Core.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/obj/Debug/net9.0/RecipesApp.Client.Core.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Core/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Repositories/obj/Debug/net9.0/RecipesApp.Client.Repositories.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Repositories/obj/Debug/net9.0/RecipesApp.Client.Repositories.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Repositories/obj/Debug/net9.0/RecipesApp.Client.Repositories.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Repositories/obj/Debug/net9.0/RecipesApp.Client.Repositories.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Repositories/obj/Debug/net9.0/RecipesApp.Client.Repositories.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Repositories/obj/Debug/net9.0/RecipesApp.Client.Repositories.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Repositories/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Repositories/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Repositories/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Repositories/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Localization.Maui/obj/Debug/net9.0-android/RecipesApp.Localization.Maui.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Localization.Maui/obj/Debug/net9.0-android/RecipesApp.Localization.Maui.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Localization.Maui/obj/Debug/net9.0-android/RecipesApp.Localization.Maui.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Localization.Maui/obj/Debug/net9.0-android/RecipesApp.Localization.Maui.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Localization.Maui/obj/Debug/net9.0-android/RecipesApp.Localization.Maui.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Localization.Maui/obj/Debug/net9.0-android/RecipesApp.Localization.Maui.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Localization.Maui/obj/Debug/net9.0-ios/RecipesApp.Localization.Maui.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Localization.Maui/obj/Debug/net9.0-ios/RecipesApp.Localization.Maui.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Localization.Maui/obj/Debug/net9.0-ios/RecipesApp.Localization.Maui.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Localization.Maui/obj/Debug/net9.0-ios/RecipesApp.Localization.Maui.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Localization.Maui/obj/Debug/net9.0-ios/RecipesApp.Localization.Maui.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Localization.Maui/obj/Debug/net9.0-ios/RecipesApp.Localization.Maui.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Localization.Maui/obj/Debug/net9.0-maccatalyst/RecipesApp.Localization.Maui.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Localization.Maui/obj/Debug/net9.0-maccatalyst/RecipesApp.Localization.Maui.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Localization.Maui/obj/Debug/net9.0-maccatalyst/RecipesApp.Localization.Maui.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Localization.Maui/obj/Debug/net9.0-maccatalyst/RecipesApp.Localization.Maui.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Localization.Maui/obj/Debug/net9.0-maccatalyst/RecipesApp.Localization.Maui.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Localization.Maui/obj/Debug/net9.0-maccatalyst/RecipesApp.Localization.Maui.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Localization.Maui/obj/Debug/net9.0-windows10.0.19041.0/RecipesApp.Localization.Maui.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Localization.Maui/obj/Debug/net9.0-windows10.0.19041.0/RecipesApp.Localization.Maui.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Localization.Maui/obj/Debug/net9.0-windows10.0.19041.0/RecipesApp.Localization.Maui.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Localization.Maui/obj/Debug/net9.0-windows10.0.19041.0/RecipesApp.Localization.Maui.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Localization.Maui/obj/Debug/net9.0-windows10.0.19041.0/RecipesApp.Localization.Maui.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Localization.Maui/obj/Debug/net9.0-windows10.0.19041.0/RecipesApp.Localization.Maui.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Localization.Maui/obj/Debug/net9.0/RecipesApp.Localization.Maui.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Localization.Maui/obj/Debug/net9.0/RecipesApp.Localization.Maui.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Localization.Maui/obj/Debug/net9.0/RecipesApp.Localization.Maui.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Localization.Maui/obj/Debug/net9.0/RecipesApp.Localization.Maui.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Localization.Maui/obj/Debug/net9.0/RecipesApp.Localization.Maui.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Localization.Maui/obj/Debug/net9.0/RecipesApp.Localization.Maui.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Localization.Maui/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Localization.Maui/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Localization.Maui/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Localization.Maui/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Localization/obj/Debug/net9.0/RecipesApp.Localization.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Localization/obj/Debug/net9.0/RecipesApp.Localization.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Localization/obj/Debug/net9.0/RecipesApp.Localization.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Localization/obj/Debug/net9.0/RecipesApp.Localization.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Localization/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Localization/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile.UnitTests/obj/Debug/net9.0/RecipesApp.Mobile.UnitTests.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile.UnitTests/obj/Debug/net9.0/RecipesApp.Mobile.UnitTests.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile.UnitTests/obj/Debug/net9.0/RecipesApp.Mobile.UnitTests.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile.UnitTests/obj/Debug/net9.0/RecipesApp.Mobile.UnitTests.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile.UnitTests/obj/Debug/net9.0/RecipesApp.Mobile.UnitTests.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile.UnitTests/obj/Debug/net9.0/RecipesApp.Mobile.UnitTests.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile.UnitTests/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile.UnitTests/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile.UnitTests/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile.UnitTests/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0-android/R.txt" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0-android/R.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0-android/RecipesApp.Mobile.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0-android/RecipesApp.Mobile.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0-android/RecipesApp.Mobile.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0-android/RecipesApp.Mobile.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0-android/RecipesApp.Mobile.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0-android/RecipesApp.Mobile.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0-android/_Microsoft.Android.Resource.Designer.dll" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0-android/_Microsoft.Android.Resource.Designer.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0-android/mauiimage.outputs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0-android/mauiimage.outputs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0-android/resizetizer/sp/drawable-v31/maui_splash_image.xml" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0-android/resizetizer/sp/drawable-v31/maui_splash_image.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0-android/resizetizer/sp/drawable/maui_splash_image.xml" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0-android/resizetizer/sp/drawable/maui_splash_image.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0-android/resizetizer/sp/values/maui_colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0-android/resizetizer/sp/values/maui_colors.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0-ios/iossimulator-x64/RecipesApp.Mobile.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0-ios/iossimulator-x64/RecipesApp.Mobile.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0-ios/iossimulator-x64/RecipesApp.Mobile.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0-ios/iossimulator-x64/RecipesApp.Mobile.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0-ios/iossimulator-x64/RecipesApp.Mobile.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0-ios/iossimulator-x64/RecipesApp.Mobile.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0-maccatalyst/maccatalyst-x64/RecipesApp.Mobile.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0-maccatalyst/maccatalyst-x64/RecipesApp.Mobile.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0-maccatalyst/maccatalyst-x64/RecipesApp.Mobile.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0-maccatalyst/maccatalyst-x64/RecipesApp.Mobile.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0-maccatalyst/maccatalyst-x64/RecipesApp.Mobile.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0-maccatalyst/maccatalyst-x64/RecipesApp.Mobile.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0-windows10.0.19041.0/win10-x64/RecipesApp.Mobile.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0-windows10.0.19041.0/win10-x64/RecipesApp.Mobile.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0-windows10.0.19041.0/win10-x64/RecipesApp.Mobile.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0-windows10.0.19041.0/win10-x64/RecipesApp.Mobile.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0-windows10.0.19041.0/win10-x64/RecipesApp.Mobile.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0-windows10.0.19041.0/win10-x64/RecipesApp.Mobile.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0-windows10.0.19041.0/win10-x64/output.json" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0-windows10.0.19041.0/win10-x64/output.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0/RecipesApp.Mobile.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0/RecipesApp.Mobile.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0/RecipesApp.Mobile.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0/RecipesApp.Mobile.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0/RecipesApp.Mobile.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/obj/Debug/net9.0/RecipesApp.Mobile.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Shared/obj/Debug/net9.0/RecipesApp.Shared.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Shared/obj/Debug/net9.0/RecipesApp.Shared.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Shared/obj/Debug/net9.0/RecipesApp.Shared.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Shared/obj/Debug/net9.0/RecipesApp.Shared.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.Shared/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Shared/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipesApp.sln" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Core.UnitTests/EmptyOrWithinRangeAttributeTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Core.UnitTests/EmptyOrWithinRangeAttributeTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Core.UnitTests/GlobalUsings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Core.UnitTests/GlobalUsings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Core.UnitTests/RecipeDetailViewModelTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Core.UnitTests/RecipeDetailViewModelTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Core.UnitTests/RecipeListItemViewModelTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Core.UnitTests/RecipeListItemViewModelTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Core/Features/Favorites/FavoritesService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/Features/Favorites/FavoritesService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Core/Features/Favorites/IFavoritesRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/Features/Favorites/IFavoritesRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Core/Features/Favorites/IFavoritesService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/Features/Favorites/IFavoritesService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Core/Features/Ratings/IRatingsRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/Features/Ratings/IRatingsRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Core/Features/Ratings/IRatingsService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/Features/Ratings/IRatingsService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Core/Features/Ratings/Rating.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/Features/Ratings/Rating.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Core/Features/Ratings/RatingsService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/Features/Ratings/RatingsService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Core/Features/Recipes/IRecipeRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/Features/Recipes/IRecipeRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Core/Features/Recipes/IRecipeService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/Features/Recipes/IRecipeService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Core/Features/Recipes/Recipe.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/Features/Recipes/Recipe.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Core/Features/Recipes/RecipeService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/Features/Recipes/RecipeService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Core/Messages/CultureChangedMessage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/Messages/CultureChangedMessage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Core/Messages/FavoriteUpdateMessage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/Messages/FavoriteUpdateMessage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Core/Messages/ServingsChangedMessage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/Messages/ServingsChangedMessage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Core/Navigation/INavigatable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/Navigation/INavigatable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Core/Navigation/INavigatedFrom.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/Navigation/INavigatedFrom.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Core/Navigation/INavigatedTo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/Navigation/INavigatedTo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Core/Navigation/INavigationParameterReceiver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/Navigation/INavigationParameterReceiver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Core/Navigation/INavigationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/Navigation/INavigationService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Core/Navigation/NavigationType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/Navigation/NavigationType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Core/Nothing.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/Nothing.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Core/Result.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/Result.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Core/Services/IDialogService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/Services/IDialogService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Core/Validation/EmptyOrWithinRangeAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/Validation/EmptyOrWithinRangeAttribute.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Core/Validation/ValidationErrorExposer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/Validation/ValidationErrorExposer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Core/ViewModels/AddRatingViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/ViewModels/AddRatingViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Core/ViewModels/IngredientsListViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/ViewModels/IngredientsListViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Core/ViewModels/InstructionBaseViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/ViewModels/InstructionBaseViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Core/ViewModels/InstructionViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/ViewModels/InstructionViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Core/ViewModels/NoteViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/ViewModels/NoteViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Core/ViewModels/PickLanguageViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/ViewModels/PickLanguageViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Core/ViewModels/RatingGroup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/ViewModels/RatingGroup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Core/ViewModels/RecipeDetailViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/ViewModels/RecipeDetailViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Core/ViewModels/RecipeIngredientViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/ViewModels/RecipeIngredientViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Core/ViewModels/RecipeListItemViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/ViewModels/RecipeListItemViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Core/ViewModels/RecipeRatingsDetailViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/ViewModels/RecipeRatingsDetailViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Core/ViewModels/RecipeRatingsSummaryViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/ViewModels/RecipeRatingsSummaryViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Core/ViewModels/RecipesOverviewViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/ViewModels/RecipesOverviewViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Core/ViewModels/SettingsViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/ViewModels/SettingsViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Core/ViewModels/UserReviewViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Core/ViewModels/UserReviewViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Repositories/Api/IFavoritesApi.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Repositories/Api/IFavoritesApi.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Repositories/Api/IRatingsApi.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Repositories/Api/IRatingsApi.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Repositories/Api/IRecipeApi.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Repositories/Api/IRecipeApi.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Repositories/ApiGateway.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Repositories/ApiGateway.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Repositories/FavoritesApiGateway.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Repositories/FavoritesApiGateway.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Repositories/Mappers/RatingsMapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Repositories/Mappers/RatingsMapper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Repositories/Mappers/RecipeMapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Repositories/Mappers/RecipeMapper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Repositories/RatingsApiGateway.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Repositories/RatingsApiGateway.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Repositories/RecipeApiGateway.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Repositories/RecipeApiGateway.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Repositories/RepositorySettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Repositories/RepositorySettings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Client.Repositories/ServiceCollectionExtension.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Client.Repositories/ServiceCollectionExtension.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Localization.Maui/LocalizationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Localization.Maui/LocalizationManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Localization.Maui/TranslateExtension.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Localization.Maui/TranslateExtension.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Localization/ILocalizationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Localization/ILocalizationManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Localization/ILocalizedResourcesProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Localization/ILocalizedResourcesProvider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Localization/LocalizedResourcesProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Localization/LocalizedResourcesProvider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile.UnitTests/GlobalUsings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile.UnitTests/GlobalUsings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile.UnitTests/InstructionsDataTemplateSelectorTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile.UnitTests/InstructionsDataTemplateSelectorTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile.UnitTests/RatingToStarsConverterTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile.UnitTests/RatingToStarsConverterTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/AddRatingPage.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/AddRatingPage.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/AddRatingPage.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/AddRatingPage.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/App.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/App.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/App.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/App.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/AppShell.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/AppShell.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/AppShell.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/AppShell.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/Controls/FavoriteControl.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/Controls/FavoriteControl.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/Controls/FavoriteControl.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/Controls/FavoriteControl.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/Controls/FavoriteControlTemplated.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/Controls/FavoriteControlTemplated.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/Controls/FavoriteControlTemplated.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/Controls/FavoriteControlTemplated.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/Converters/DoNothingConverter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/Converters/DoNothingConverter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/Converters/InverseBoolConverter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/Converters/InverseBoolConverter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/Converters/RatingAndReviewsToColorConverter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/Converters/RatingAndReviewsToColorConverter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/Converters/RatingToColorConverter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/Converters/RatingToColorConverter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/Converters/RatingToStarsConverter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/Converters/RatingToStarsConverter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/LoginPage.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/LoginPage.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/LoginPage.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/LoginPage.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/MainPage.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/MainPage.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/MainPage.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/MainPage.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/MauiProgram.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/MauiProgram.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/Misc/HttpClientHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/Misc/HttpClientHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/Misc/HttpsClientHandlerService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/Misc/HttpsClientHandlerService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/Navigation/INavigationInterceptor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/Navigation/INavigationInterceptor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/Navigation/NavigationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/Navigation/NavigationService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/PickLanguagePage.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/PickLanguagePage.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/PickLanguagePage.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/PickLanguagePage.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/RecipeDetailPage.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/RecipeDetailPage.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/RecipeDetailPage.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/RecipeDetailPage.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/RecipeRatingDetailPage.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/RecipeRatingDetailPage.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/RecipeRatingDetailPage.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/RecipeRatingDetailPage.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/RecipesOverviewPage.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/RecipesOverviewPage.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/RecipesOverviewPage.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/RecipesOverviewPage.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/ServiceProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/ServiceProvider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/Services/DialogService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/Services/DialogService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/SettingsPage.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/SettingsPage.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/SettingsPage.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/SettingsPage.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Mobile/TemplateSelectors/InstructionsDataTemplateSelector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Mobile/TemplateSelectors/InstructionsDataTemplateSelector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Shared/Dto/FavoriteDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Shared/Dto/FavoriteDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Shared/Dto/InstructionDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Shared/Dto/InstructionDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Shared/Dto/RatingDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Shared/Dto/RatingDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Shared/Dto/RatingsSummaryDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Shared/Dto/RatingsSummaryDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Shared/Dto/RecipeDetailDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Shared/Dto/RecipeDetailDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Shared/Dto/RecipeIngredientDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Shared/Dto/RecipeIngredientDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Shared/Dto/RecipeOverviewItemDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Shared/Dto/RecipeOverviewItemDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Web.Api/FavoritesDataStore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Web.Api/FavoritesDataStore.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Web.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Web.Api/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Web.Api/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Web.Api/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Web.Api/RatingsService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Web.Api/RatingsService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Web.Api/RecipeService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Web.Api/RecipeService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Web.Api/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Web.Api/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Web.Api/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Web.Api/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Web.Api/ratings.json" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Web.Api/ratings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipesApp.Web.Api/recipedetails.json" beforeDir="false" afterPath="$PROJECT_DIR$/RecipesApp.Web.Api/recipedetails.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,23 +175,42 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "feature/api",
+    "UWP.RecipesApp.Mobile.executor": "Run",
+    "git-widget-placeholder": "develop",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "rider.code.cleanup.on.save": "true",
+    "settings.editor.selected.configurable": "actions.on.save",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
     "stardust.markdown.MarkdownSplitEditorSuppressor:keyList": []
   }
 }]]></component>
-  <component name="RunManager" selected="iOS.RecipesApp.Mobile">
+  <component name="RunManager" selected="UWP.RecipesApp.Mobile">
     <configuration name="RecipesApp.Mobile: Windows Machine" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/RecipesApp.Mobile/RecipesApp.Mobile.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net9.0-windows10.0.19041.0" />
       <option name="LAUNCH_PROFILE_NAME" value="Windows Machine" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
+      <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
+      <option name="SEND_DEBUG_REQUEST" value="1" />
+      <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
+      <option name="AUTO_ATTACH_CHILDREN" value="0" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
+    <configuration name="RecipesApp.Web.Api: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/RecipesApp.Web.Api/RecipesApp.Web.Api.csproj" />
+      <option name="LAUNCH_PROFILE_TFM" value="net9.0" />
+      <option name="LAUNCH_PROFILE_NAME" value="IIS Express" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="USE_MONO" value="0" />
       <option name="RUNTIME_ARGUMENTS" value="" />
@@ -255,6 +316,7 @@
       <workItem from="1757243244190" duration="764000" />
       <workItem from="1757246005813" duration="3635000" />
       <workItem from="1757259370875" duration="1417000" />
+      <workItem from="1757261597077" duration="3513000" />
     </task>
     <servers />
   </component>

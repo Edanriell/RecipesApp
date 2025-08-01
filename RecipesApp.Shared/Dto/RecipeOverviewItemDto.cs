@@ -1,4 +1,4 @@
-﻿namespace Recipes.Shared.Dto;
+﻿namespace RecipesApp.Shared.Dto;
 
 public record RecipeOverviewItemDto(string Id, string Title, string? Image = null);
 

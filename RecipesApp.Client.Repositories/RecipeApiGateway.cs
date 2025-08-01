@@ -1,25 +1,29 @@
-﻿using Localization;
-using Recipes.Client.Core;
-using Recipes.Client.Core.Features.Recipes;
-using static Recipes.Client.Repositories.Mappers.RecipeMapper;
+﻿using RecipesApp.Client.Core;
+using RecipesApp.Client.Core.Features.Recipes;
+using RecipesApp.Client.Repositories.Api;
+using RecipesApp.Localization;
+using static RecipesApp.Client.Repositories.Mappers.RecipeMapper;
 
-namespace Recipes.Mobile.Repositories;
+namespace RecipesApp.Client.Repositories;
 
 internal class RecipeApiGateway : ApiGateway, IRecipeRepository
 {
-    readonly IRecipeApi _api;
-    readonly ILocalizationManager _localizationManager;
+    private readonly IRecipeApi _api;
+    private readonly ILocalizationManager _localizationManager;
 
-    public Task<Result<LoadRecipesResponse>> LoadRecipes(int pageSize, int page)
-        => InvokeAndMap(_api.GetRecipes(_localizationManager.GetUserCulture().Name, pageSize, page), MapRecipesOverview);
-
-    public Task<Result<RecipeDetail>> LoadRecipe(string id)
-        => InvokeAndMap(_api.GetRecipe(id), MapRecipe);
-
-    public RecipeApiGateway(IRecipeApi api, 
+    public RecipeApiGateway(
+        IRecipeApi api,
         ILocalizationManager localizationManager)
     {
         _api = api;
         _localizationManager = localizationManager;
     }
+
+    public Task<Result<LoadRecipesResponse>> LoadRecipes(int pageSize, int page)
+    {
+        return InvokeAndMap(_api.GetRecipes(_localizationManager.GetUserCulture().Name, pageSize, page),
+            MapRecipesOverview);
+    }
+
+    public Task<Result<RecipeDetail>> LoadRecipe(string id) { return InvokeAndMap(_api.GetRecipe(id), MapRecipe); }
 }
