@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0ExW7zx2LoM=",
+  "dgSpecHash": "OsAuNI4ZXQ8=",
   "success": false,
-  "projectFilePath": "D:\\Projects\\RecipesApp\\RecipesApp.Mobile.UnitTests\\RecipesApp.Mobile.UnitTests.csproj",
+  "projectFilePath": "D:\\Projects2\\RecipesApp\\RecipesApp.Mobile.UnitTests\\RecipesApp.Mobile.UnitTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lauris\\.nuget\\packages\\autobogus\\2.13.1\\autobogus.2.13.1.nupkg.sha512",
     "C:\\Users\\Lauris\\.nuget\\packages\\bogus\\31.0.3\\bogus.31.0.3.nupkg.sha512",
@@ -45,8 +45,8 @@
       "code": "NU1201",
       "level": "Error",
       "message": "Project RecipesApp.Mobile is not compatible with net9.0 (.NETCoreApp,Version=v9.0). Project RecipesApp.Mobile supports:\r\n  - net9.0-android35.0 (.NETCoreApp,Version=v9.0)\r\n  - net9.0-ios18.5 (.NETCoreApp,Version=v9.0)\r\n  - net9.0-maccatalyst18.5 (.NETCoreApp,Version=v9.0)\r\n  - net9.0-windows10.0.19041 (.NETCoreApp,Version=v9.0)",
-      "projectPath": "D:\\Projects\\RecipesApp\\RecipesApp.Mobile.UnitTests\\RecipesApp.Mobile.UnitTests.csproj",
-      "filePath": "D:\\Projects\\RecipesApp\\RecipesApp.Mobile.UnitTests\\RecipesApp.Mobile.UnitTests.csproj",
+      "projectPath": "D:\\Projects2\\RecipesApp\\RecipesApp.Mobile.UnitTests\\RecipesApp.Mobile.UnitTests.csproj",
+      "filePath": "D:\\Projects2\\RecipesApp\\RecipesApp.Mobile.UnitTests\\RecipesApp.Mobile.UnitTests.csproj",
       "libraryId": "RecipesApp.Mobile",
       "targetGraphs": [
         "net9.0"

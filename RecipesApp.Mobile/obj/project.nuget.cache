@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UldK+Nh5sgs=",
+  "dgSpecHash": "YgS44Znjr2E=",
   "success": true,
-  "projectFilePath": "D:\\Projects\\RecipesApp\\RecipesApp.Mobile\\RecipesApp.Mobile.csproj",
+  "projectFilePath": "D:\\Projects2\\RecipesApp\\RecipesApp.Mobile\\RecipesApp.Mobile.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lauris\\.nuget\\packages\\communitytoolkit.maui\\12.2.0\\communitytoolkit.maui.12.2.0.nupkg.sha512",
     "C:\\Users\\Lauris\\.nuget\\packages\\communitytoolkit.maui.core\\12.2.0\\communitytoolkit.maui.core.12.2.0.nupkg.sha512",

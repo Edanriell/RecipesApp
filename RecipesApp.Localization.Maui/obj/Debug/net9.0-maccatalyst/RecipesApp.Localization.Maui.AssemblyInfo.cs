@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RecipesApp.Localization.Maui")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2c096fab84f002dc4a1f77cf38438b1bd77529d8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d33f824d865eb83781686ac604f415c3075ef1bc")]
 [assembly: System.Reflection.AssemblyProductAttribute("RecipesApp.Localization.Maui")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RecipesApp.Localization.Maui")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
