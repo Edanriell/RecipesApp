@@ -1,0 +1,6 @@
+@RecipesApp.Web.Api_HostAddress = http://localhost:5111
+
+GET {{RecipesApp.Web.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
