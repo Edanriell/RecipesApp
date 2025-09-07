@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
+
 <Shell
-    x:Class="Recipes.Mobile.AppShell"
+    x:Class="RecipesApp.Mobile.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:Recipes.Mobile"
+    xmlns:local="clr-namespace:RecipesApp.Mobile"
     Shell.FlyoutBehavior="Disabled"
     Shell.TabBarBackgroundColor="{StaticResource Primary}"
     Shell.TabBarForegroundColor="White"

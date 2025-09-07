@@ -1,25 +1,22 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using Recipes.Client.Core.Features.Favorites;
-using Recipes.Client.Core.Features.Ratings;
-using Recipes.Client.Core.Features.Recipes;
-using Recipes.Mobile.Repositories;
+using RecipesApp.Client.Core.Features.Favorites;
+using RecipesApp.Client.Core.Features.Ratings;
+using RecipesApp.Client.Core.Features.Recipes;
+using RecipesApp.Client.Repositories.Api;
 using Refit;
 
-namespace Recipes.Client.Repositories;
+namespace RecipesApp.Client.Repositories;
 
 public static class ServiceCollectionExtension
 {
-    public static IServiceCollection 
+    public static IServiceCollection
         RegisterRepositories(
-        this IServiceCollection services,
-        RepositorySettings settings)
+            this IServiceCollection services,
+            RepositorySettings settings)
     {
-        services.AddSingleton(
-            (s) => RestService.For<IRatingsApi>(settings.HttpClient));
-        services.AddSingleton(
-            (s) => RestService.For<IRecipeApi>(settings.HttpClient));
-        services.AddSingleton(
-            (s) => RestService.For<IFavoritesApi>(settings.HttpClient));
+        services.AddSingleton(s => RestService.For<IRatingsApi>(settings.HttpClient));
+        services.AddSingleton(s => RestService.For<IRecipeApi>(settings.HttpClient));
+        services.AddSingleton(s => RestService.For<IFavoritesApi>(settings.HttpClient));
 
         services.AddTransient<IRatingsRepository, RatingsApiGateway>();
         services.AddTransient<IRecipeRepository, RecipeApiGateway>();

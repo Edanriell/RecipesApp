@@ -1,16 +1,17 @@
-﻿using Localization;
-using Recipes.Mobile.Navigation;
+﻿using RecipesApp.Localization;
+using RecipesApp.Mobile.Navigation;
 
-namespace Recipes.Mobile;
+namespace RecipesApp.Mobile;
 
 public partial class App : Application
 {
-    public App(INavigationInterceptor interceptor,
-    ILocalizationManager manager)
+    public App(
+        INavigationInterceptor interceptor,
+        ILocalizationManager manager)
     {
         manager.RestorePreviousCulture();
 
-        Application.Current.UserAppTheme = AppTheme.Light;
+        Current.UserAppTheme = AppTheme.Light;
         InitializeComponent();
 
         MainPage = new AppShell(interceptor);

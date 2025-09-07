@@ -1,17 +1,16 @@
-﻿using Recipes.Client.Core.Navigation;
-using Recipes.Mobile.Navigation;
+﻿using RecipesApp.Client.Core.Navigation;
+using RecipesApp.Mobile.Navigation;
 
-namespace Recipes.Mobile;
+namespace RecipesApp.Mobile;
 
 public partial class AppShell : Shell
 {
-    INavigationInterceptor interceptor;
+    private readonly INavigationInterceptor interceptor;
 
     public AppShell(INavigationInterceptor interceptor)
     {
         this.interceptor = interceptor;
         InitializeComponent();
-        
     }
 
     protected override async void OnNavigating(ShellNavigatingEventArgs args)
@@ -20,19 +19,15 @@ public partial class AppShell : Shell
 
         var token = args.GetDeferral();
 
-        if(token is not null)
+        if (token is not null)
         {
             var canNavigate = await interceptor
-            .CanNavigate(CurrentPage?.BindingContext, GetNavigationType(args.Source));
+                .CanNavigate(CurrentPage?.BindingContext, GetNavigationType(args.Source));
 
             if (canNavigate)
-            {
                 token.Complete();
-            }
             else
-            {
                 args.Cancel();
-            }
         }
     }
 
@@ -46,20 +41,22 @@ public partial class AppShell : Shell
             CurrentPage?.BindingContext, navigationType);
     }
 
-    private NavigationType GetNavigationType(ShellNavigationSource source) =>
-    source switch
+    private NavigationType GetNavigationType(ShellNavigationSource source)
     {
-        ShellNavigationSource.Push or 
-        ShellNavigationSource.Insert 
-            => NavigationType.Forward,
-        ShellNavigationSource.Pop or 
-        ShellNavigationSource.PopToRoot or 
-        ShellNavigationSource.Remove 
-            => NavigationType.Back,
-        ShellNavigationSource.ShellItemChanged or 
-        ShellNavigationSource.ShellSectionChanged or 
-        ShellNavigationSource.ShellContentChanged 
-            => NavigationType.SectionChange,
-        _ => NavigationType.Unknown
-    };
+        return source switch
+        {
+            ShellNavigationSource.Push or
+                ShellNavigationSource.Insert
+                => NavigationType.Forward,
+            ShellNavigationSource.Pop or
+                ShellNavigationSource.PopToRoot or
+                ShellNavigationSource.Remove
+                => NavigationType.Back,
+            ShellNavigationSource.ShellItemChanged or
+                ShellNavigationSource.ShellSectionChanged or
+                ShellNavigationSource.ShellContentChanged
+                => NavigationType.SectionChange,
+            _ => NavigationType.Unknown
+        };
+    }
 }

@@ -1,4 +1,4 @@
-﻿namespace Recipes.Client.Core.Services;
+﻿namespace RecipesApp.Client.Core.Services;
 
 public interface IDialogService
 {

@@ -1,6 +1,6 @@
-﻿using Recipes.Client.Core.Navigation;
+﻿using RecipesApp.Client.Core.Navigation;
 
-namespace Recipes.Mobile.Navigation;
+namespace RecipesApp.Mobile.Navigation;
 
 public interface INavigationInterceptor
 {

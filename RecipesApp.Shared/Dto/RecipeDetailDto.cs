@@ -1,4 +1,4 @@
-﻿namespace Recipes.Shared.Dto;
+﻿namespace RecipesApp.Shared.Dto;
 
 public record RecipeDetailDto(
     string Id,

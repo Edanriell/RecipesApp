@@ -1,11 +1,8 @@
-﻿namespace Recipes.Client.Repositories;
+﻿namespace RecipesApp.Client.Repositories;
 
 public class RepositorySettings
 {
-    public HttpClient HttpClient { get; }
+    public RepositorySettings(HttpClient httpClient) { HttpClient = httpClient; }
 
-    public RepositorySettings(HttpClient httpClient)
-    {
-        HttpClient = httpClient;
-    }
+    public HttpClient HttpClient { get; }
 }

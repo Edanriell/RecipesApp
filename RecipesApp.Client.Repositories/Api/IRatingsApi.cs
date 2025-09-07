@@ -1,7 +1,7 @@
-﻿using Recipes.Shared.Dto;
+﻿using RecipesApp.Shared.Dto;
 using Refit;
 
-namespace Recipes.Mobile.Repositories;
+namespace RecipesApp.Client.Repositories.Api;
 
 public interface IRatingsApi
 {

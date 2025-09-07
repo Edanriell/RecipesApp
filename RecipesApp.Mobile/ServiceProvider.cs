@@ -1,9 +1,8 @@
-﻿namespace Recipes.Mobile;
+﻿namespace RecipesApp.Mobile;
 
 public static class ServiceProvider
 {
-    public static TService GetService<TService>()
-        => Current.GetService<TService>();
+    public static TService GetService<TService>() { return Current.GetService<TService>(); }
 
     public static IServiceProvider Current
         =>
@@ -12,7 +11,7 @@ public static class ServiceProvider
 #elif ANDROID
     MauiApplication.Current.Services;
 #elif IOS || MACCATALYST
-       MauiUIApplicationDelegate.Current.Services;
+            MauiUIApplicationDelegate.Current.Services;
 #else
   null;
 #endif

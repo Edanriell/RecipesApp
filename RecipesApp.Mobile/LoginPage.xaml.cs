@@ -1,25 +1,25 @@
 using CommunityToolkit.Mvvm.Input;
-using Recipes.Client.Core.Navigation;
+using RecipesApp.Client.Core.Navigation;
 
-namespace Recipes.Mobile;
+namespace RecipesApp.Mobile;
 
 public partial class LoginPage : ContentPage
 {
-	public LoginPage(LoginPageViewModel viewModel)
-	{
-		InitializeComponent();
-        this.BindingContext = viewModel;
-	}
+    public LoginPage(LoginPageViewModel viewModel)
+    {
+        InitializeComponent();
+        BindingContext = viewModel;
+    }
 }
-
 
 public class LoginPageViewModel
 {
-    readonly INavigationService navigationService;
+    private readonly INavigationService navigationService;
+
     public LoginPageViewModel(INavigationService navigation)
     {
-       navigationService = navigation;
-       //LoginCommand = new RelayCommand(() => navigationService.LoadApp());
+        navigationService = navigation;
+        //LoginCommand = new RelayCommand(() => navigationService.LoadApp());
     }
 
     public RelayCommand LoginCommand { get; }

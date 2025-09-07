@@ -1,28 +1,27 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
+
 <ContentPage
-    x:Class="Recipes.Mobile.RecipeDetailPage"
+    x:Class="RecipesApp.Mobile.RecipeDetailPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:controls="clr-namespace:Recipes.Mobile.Controls"
-    xmlns:conv="clr-namespace:Recipes.Mobile.Converters"
-    xmlns:selectors="clr-namespace:Recipes.Mobile.TemplateSelectors"
+    xmlns:controls="clr-namespace:RecipesApp.Mobile.Controls"
+    xmlns:conv="clr-namespace:RecipesApp.Mobile.Converters"
+    xmlns:selectors="clr-namespace:RecipesApp.Mobile.TemplateSelectors"
     xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
-    xmlns:vms="clr-namespace:Recipes.Client.Core.ViewModels;assembly=Recipes.Client.Core"
-    xmlns:viewModels="clr-namespace:Recipes.Client.Core.ViewModels;assembly=RecipesApp.Client.Core"
-    x:DataType="viewModels:RecipeDetailViewModel">
+    xmlns:vms="clr-namespace:RecipesApp.Client.Core.ViewModels;assembly=RecipesApp.Client.Core"
+    x:DataType="vms:RecipeDetailViewModel">
     <ContentPage.Resources>
         <conv:RatingToStarsConverter x:Key="ratingToStarsConverter" />
-        <conv:RatingToColorConverter x:Key="ratingToColorConverter" />
         <conv:RatingAndReviewsToColorConverter x:Key="ratingAndReviewsToColorConverter" />
         <conv:InverseBoolConverter x:Key="inverseBoolConverter" />
         <toolkit:ListToStringConverter x:Key="listToStringConverter" Separator=", " />
-        <DataTemplate x:Key="instructionTemplate" x:DataType="viewModels:InstructionViewModel">
+        <DataTemplate x:Key="instructionTemplate" x:DataType="vms:InstructionViewModel">
             <VerticalStackLayout Spacing="10">
                 <Label FontSize="20" Text="{Binding Index, StringFormat='{0:D2}.', Mode=OneTime}" />
                 <Label Margin="10,0" Text="{Binding Description, Mode=OneTime}" />
             </VerticalStackLayout>
         </DataTemplate>
-        <DataTemplate x:Key="noteTemplate" x:DataType="viewModels:NoteViewModel">
+        <DataTemplate x:Key="noteTemplate" x:DataType="vms:NoteViewModel">
             <Grid Margin="20,0" ColumnDefinitions="35,*">
                 <Label
                     FontFamily="MaterialIconsRegular"
@@ -40,20 +39,6 @@
             x:Key="instructionDataTemplateSelector"
             InstructionTemplate="{StaticResource instructionTemplate}"
             NoteTemplate="{StaticResource noteTemplate}" />
-        <ControlTemplate x:Key="FavoriteTemplate">
-            <VerticalStackLayout>
-                <Label
-                    FontSize="10"
-                    HorizontalOptions="Center"
-                    Text="Favorite?" />
-                <Switch
-                    x:Name="scalableContent"
-                    HorizontalOptions="Center"
-                    InputTransparent="True"
-                    IsEnabled="{Binding IsInteractive, Source={RelativeSource TemplatedParent}}"
-                    IsToggled="{Binding IsFavorite, Source={RelativeSource TemplatedParent}, Mode=TwoWay}" />
-            </VerticalStackLayout>
-        </ControlTemplate>
     </ContentPage.Resources>
     <Grid>
         <ScrollView>
@@ -172,16 +157,21 @@
                 </Grid>
 
                 <VerticalStackLayout Padding="10">
-                    <Label Text="{Binding Calories, StringFormat='Calories: {0} kcal', TargetNullValue='No calories information available'}" />
-                    <Label Text="{Binding ReadyInMinutes, StringFormat='Ready in: {0} minutes', TargetNullValue='No cooking time specified'}" />
+                    <Label
+                        Text="{Binding Calories, StringFormat='Calories: {0} kcal', TargetNullValue='No calories information available'}" />
+                    <Label
+                        Text="{Binding ReadyInMinutes, StringFormat='Ready in: {0} minutes', TargetNullValue='No cooking time specified'}" />
                     <HorizontalStackLayout>
                         <Label
                             FontAttributes="Italic"
                             Text="Show Allergen information"
                             VerticalOptions="Center" />
-                        <CheckBox IsChecked="{Binding HideAllergenInformation, Mode=OneWayToSource, Converter={StaticResource inverseBoolConverter}}" />
+                        <CheckBox
+                            IsChecked="{Binding HideAllergenInformation, Mode=OneWayToSource, Converter={StaticResource inverseBoolConverter}}" />
                     </HorizontalStackLayout>
-                    <Label IsVisible="{Binding HideAllergenInformation, Mode=OneWay, Converter={StaticResource inverseBoolConverter}}" Text="{Binding Allergens, Converter={StaticResource listToStringConverter}}" />
+                    <Label
+                        IsVisible="{Binding HideAllergenInformation, Mode=OneWay, Converter={StaticResource inverseBoolConverter}}"
+                        Text="{Binding Allergens, Converter={StaticResource listToStringConverter}}" />
                 </VerticalStackLayout>
 
                 <VerticalStackLayout Padding="10">
@@ -189,7 +179,8 @@
                         FontAttributes="Italic,Bold"
                         FontSize="16"
                         Text="Ingredients list" />
-                    <HorizontalStackLayout x:DataType="viewModels:IngredientsListViewModel" BindingContext="{Binding IngredientsList, Source={RelativeSource AncestorType={x:Type viewModels:RecipeDetailViewModel}}}">
+                    <HorizontalStackLayout x:DataType="vms:IngredientsListViewModel"
+                                           BindingContext="{Binding IngredientsList, Source={RelativeSource AncestorType={x:Type vms:RecipeDetailViewModel}}}">
                         <Label Text="Number of servings:" VerticalOptions="Center" />
 
                         <Label
@@ -210,10 +201,10 @@
                         BindableLayout.ItemsSource="{Binding IngredientsList.Ingredients}"
                         Spacing="10">
                         <BindableLayout.ItemTemplate>
-                            <DataTemplate x:DataType="viewModels:RecipeIngredientViewModel">
+                            <DataTemplate x:DataType="vms:RecipeIngredientViewModel">
                                 <HorizontalStackLayout Spacing="5">
                                     <Button
-                                        Command="{Binding AddToShoppingListCommand, Source={RelativeSource AncestorType={x:Type viewModels:RecipeDetailViewModel}}}"
+                                        Command="{Binding AddToShoppingListCommand, Source={RelativeSource AncestorType={x:Type vms:RecipeDetailViewModel}}}"
                                         CommandParameter="{Binding}"
                                         FontFamily="MaterialIconsRegular"
                                         Text="&#xe854;" />
@@ -240,10 +231,10 @@
                             BindableLayout.ItemsSource="{Binding ShoppingList, Mode=OneTime}"
                             Spacing="10">
                             <BindableLayout.ItemTemplate>
-                                <DataTemplate x:DataType="viewModels:RecipeIngredientViewModel">
+                                <DataTemplate x:DataType="vms:RecipeIngredientViewModel">
                                     <HorizontalStackLayout Spacing="5">
                                         <Button
-                                            Command="{Binding RemoveFromShoppingListCommand, Source={RelativeSource AncestorType={x:Type viewModels:RecipeDetailViewModel}}}"
+                                            Command="{Binding RemoveFromShoppingListCommand, Source={RelativeSource AncestorType={x:Type vms:RecipeDetailViewModel}}}"
                                             CommandParameter="{Binding}"
                                             FontFamily="MaterialIconsRegular"
                                             Text="&#xe928;" />

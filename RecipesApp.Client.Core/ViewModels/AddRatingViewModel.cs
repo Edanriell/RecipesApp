@@ -1,35 +1,54 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Input;
-using Recipes.Client.Core.Features.Recipes;
-using Recipes.Client.Core.Navigation;
-using Recipes.Client.Core.Services;
-using Recipes.Client.Core.Validation;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using RecipesApp.Client.Core.Features.Recipes;
+using RecipesApp.Client.Core.Navigation;
+using RecipesApp.Client.Core.Services;
+using RecipesApp.Client.Core.Validation;
 
-namespace Recipes.Client.Core.ViewModels;
+namespace RecipesApp.Client.Core.ViewModels;
 
 public class AddRatingViewModel : ObservableValidator, INavigationParameterReceiver, INavigatedFrom, INavigatable
 {
-
-    readonly INavigationService _navigationService;
-    readonly IDialogService _dialogService;
     public const string EmailValidationRegex = @"^[aA-zZ0-9]+@[aA-zZ]+\.[aA-zZ]{2,3}$";
     public const string RangeDecimalRegex = @"^\d+(\.\d{1,1})?$";
     public const int DisplayNameMinLength = 5;
     public const int DisplayNameMaxLength = 25;
     public const double RatingMinVal = 0d;
     public const double RatingMaxVal = 4d;
+    private readonly IDialogService _dialogService;
 
-    string _recipeTitle = string.Empty;
-    public string RecipeTitle
+    private readonly INavigationService _navigationService;
+
+
+    private string _displayName;
+
+    private string _emailAddress;
+
+    private string _ratingInput;
+
+    private string _recipeTitle = string.Empty;
+
+    private string _review;
+
+    public AddRatingViewModel(
+        INavigationService navigationService,
+        IDialogService dialogService)
     {
-        get => _recipeTitle;
-        private set => SetProperty(ref _recipeTitle, value);
+        _navigationService = navigationService;
+        _dialogService = dialogService;
+        GoBackCommand = new RelayCommand(() => _navigationService.GoBack());
+        SubmitCommand = new AsyncRelayCommand(OnSubmit, () => !HasErrors);
+        Errors = new ObservableCollection<ValidationResult>();
+        ErrorExposer = new ValidationErrorExposer(this);
+        ErrorsChanged += AddRatingViewModel_ErrorsChanged;
+        ResetInputFields();
     }
 
-    string _emailAddress;
+    public string RecipeTitle { get => _recipeTitle; private set => SetProperty(ref _recipeTitle, value); }
+
     [Required]
     [RegularExpression(EmailValidationRegex)]
     public string EmailAddress
@@ -42,24 +61,12 @@ public class AddRatingViewModel : ObservableValidator, INavigationParameterRecei
         }
     }
 
-    public List<ValidationResult> EmailValidationErrors
-    {
-        get => GetErrors(nameof(EmailAddress)).ToList();
-    }
-
-
-    string _displayName;
+    public List<ValidationResult> EmailValidationErrors => GetErrors(nameof(EmailAddress)).ToList();
 
     [Required]
     [MinLength(DisplayNameMinLength)]
     [MaxLength(DisplayNameMaxLength)]
-    public string DisplayName
-    {
-        get => _displayName;
-        set => SetProperty(ref _displayName, value, true);
-    }
-
-    string _ratingInput;
+    public string DisplayName { get => _displayName; set => SetProperty(ref _displayName, value, true); }
 
     [Required]
     [RegularExpression(RangeDecimalRegex)]
@@ -74,19 +81,13 @@ public class AddRatingViewModel : ObservableValidator, INavigationParameterRecei
         }
     }
 
-    string _review;
-
 
     [CustomValidation(
         typeof(AddRatingViewModel),
         nameof(ValidateReview))]
     [EmptyOrWithinRange(
         MinLength = 10, MaxLength = 250)]
-    public string Review
-    {
-        get => _review;
-        set => SetProperty(ref _review, value, true);
-    }
+    public string Review { get => _review; set => SetProperty(ref _review, value, true); }
 
     public ValidationErrorExposer ErrorExposer { get; }
 
@@ -95,17 +96,31 @@ public class AddRatingViewModel : ObservableValidator, INavigationParameterRecei
 
     public AsyncRelayCommand SubmitCommand { get; }
 
-    public AddRatingViewModel(INavigationService navigationService,
-        IDialogService dialogService)
+    public ObservableCollection<ValidationResult> Errors { get; } = new();
+
+    public Task<bool> CanNavigateFrom(
+        NavigationType navigationType)
     {
-        _navigationService = navigationService;
-        _dialogService = dialogService;
-        GoBackCommand = new RelayCommand(() => _navigationService.GoBack());
-        SubmitCommand = new AsyncRelayCommand(OnSubmit, () => !HasErrors);
-        Errors = new();
-        ErrorExposer = new(this);
-        ErrorsChanged += AddRatingViewModel_ErrorsChanged;
-        ResetInputFields();
+        return _dialogService.AskYesNo("Leaving this page...",
+            "Are you sure you want to leave this page?");
+    }
+
+    public Task OnNavigatedFrom(NavigationType navigationType)
+    {
+        if (navigationType == NavigationType.Back)
+        {
+            ErrorsChanged -= AddRatingViewModel_ErrorsChanged;
+            ErrorExposer.Dispose();
+            ResetInputFields();
+        }
+
+        return Task.CompletedTask;
+    }
+
+    public Task OnNavigatedTo(Dictionary<string, object> parameters)
+    {
+        return LoadData(parameters["recipe"]
+            as RecipeDetail);
     }
 
     private void AddRatingViewModel_ErrorsChanged(object? sender, DataErrorsChangedEventArgs e)
@@ -123,8 +138,6 @@ public class AddRatingViewModel : ObservableValidator, INavigationParameterRecei
         RatingInput = "";
         Review = "";
     }
-
-    public ObservableCollection<ValidationResult> Errors { get; } = new();
 
     //private async Task OnSubmit()
     //{
@@ -160,43 +173,16 @@ public class AddRatingViewModel : ObservableValidator, INavigationParameterRecei
     }
 
 
-    private async Task LoadData(RecipeDetail recipe)
-    {
-        RecipeTitle = recipe.Name;
-    }
-
-    public Task OnNavigatedTo(Dictionary<string, object> parameters)
-    => LoadData(parameters["recipe"]
-        as RecipeDetail);
-
-    public Task OnNavigatedFrom(NavigationType navigationType)
-    {
-        if (navigationType == NavigationType.Back)
-        {
-            ErrorsChanged -= AddRatingViewModel_ErrorsChanged;
-            ErrorExposer.Dispose();
-            ResetInputFields();
-        }
-        return Task.CompletedTask;
-    }
+    private async Task LoadData(RecipeDetail recipe) { RecipeTitle = recipe.Name; }
 
     public static ValidationResult ValidateReview(string review, ValidationContext context)
     {
-        AddRatingViewModel instance = (AddRatingViewModel)context.ObjectInstance;
+        var instance = (AddRatingViewModel)context.ObjectInstance;
 
         if (double.TryParse(instance.RatingInput, out var rating))
-        {
             if (rating <= 2 && string.IsNullOrEmpty(review))
-            {
-                return new("A review is mandatory when rating the recipe 2 or less.");
-            }
-        }
+                return new ValidationResult("A review is mandatory when rating the recipe 2 or less.");
 
         return ValidationResult.Success;
     }
-
-    public Task<bool> CanNavigateFrom(
-        NavigationType navigationType) =>
-        _dialogService.AskYesNo("Leaving this page...",
-        "Are you sure you want to leave this page?");
 }

@@ -1,13 +1,10 @@
-﻿using Recipes.Shared.Dto;
+﻿using RecipesApp.Shared.Dto;
 
-static class FavoritesDataStore
+internal static class FavoritesDataStore
 {
-    static List<string> favorites = new List<string>();
+    private static readonly List<string> favorites = new();
 
-    public static string[] GetFavorites(string userId)
-    {
-        return favorites.ToArray();
-    }
+    public static string[] GetFavorites(string userId) { return favorites.ToArray(); }
 
     public static void StoreFavorite(string userId, FavoriteDto favorite)
     {

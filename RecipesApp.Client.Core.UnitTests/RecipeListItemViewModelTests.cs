@@ -1,9 +1,9 @@
 ﻿using AutoBogus;
 using CommunityToolkit.Mvvm.Messaging;
-using Recipes.Client.Core.Messages;
-using Recipes.Client.Core.ViewModels;
+using RecipesApp.Client.Core.Messages;
+using RecipesApp.Client.Core.ViewModels;
 
-namespace Recipes.Client.Core.UnitTests;
+namespace RecipesApp.Client.Core.UnitTests;
 
 public class RecipeListItemViewModelTests
 {
@@ -30,7 +30,7 @@ public class RecipeListItemViewModelTests
         //Arrange, Act
         var sut = AutoFaker.Generate<RecipeListItemViewModel>();
 
-        //Assert
+        //Assert 
         Assert.True(WeakReferenceMessenger.Default.IsRegistered<FavoriteUpdateMessage>(sut));
     }
 
@@ -39,16 +39,16 @@ public class RecipeListItemViewModelTests
     [InlineData(false, true)]
     [InlineData(true, true)]
     [InlineData(false, false)]
-    public void 
+    public void
         FavoriteUpdateMsgRecieved_SameId_FavoriteUpdated(
-        bool originalValue, bool updateToValue)
+            bool originalValue, bool updateToValue)
     {
         //Arrange
         var id = AutoFaker.Generate<string>();
         var sut = new RecipeListItemViewModel(id,
-            AutoFaker.Generate<string>(), 
+            AutoFaker.Generate<string>(),
             originalValue,
-           AutoFaker.Generate<string>());
+            AutoFaker.Generate<string>());
 
         //Act
         WeakReferenceMessenger.Default.Send(new FavoriteUpdateMessage(id, updateToValue));

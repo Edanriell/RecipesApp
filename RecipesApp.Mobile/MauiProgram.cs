@@ -1,21 +1,20 @@
 ﻿using CommunityToolkit.Maui;
-using Localization;
-using Localization.Maui;
 using Microsoft.Extensions.Logging;
-using Recipes.Client.Core.Features.Favorites;
-using Recipes.Client.Core.Features.Ratings;
-using Recipes.Client.Core.Features.Recipes;
-using Recipes.Client.Core.Navigation;
-using Recipes.Client.Core.Services;
-using Recipes.Client.Core.ViewModels;
-using Recipes.Client.Repositories;
-using Recipes.Mobile.Misc;
-using Recipes.Mobile.Navigation;
 using Recipes.Mobile.Resources.Strings;
-using Recipes.Mobile.Services;
-using System.Net.Http;
+using RecipesApp.Client.Core.Features.Favorites;
+using RecipesApp.Client.Core.Features.Ratings;
+using RecipesApp.Client.Core.Features.Recipes;
+using RecipesApp.Client.Core.Navigation;
+using RecipesApp.Client.Core.Services;
+using RecipesApp.Client.Core.ViewModels;
+using RecipesApp.Client.Repositories;
+using RecipesApp.Localization;
+using RecipesApp.Localization.Maui;
+using RecipesApp.Mobile.Misc;
+using RecipesApp.Mobile.Navigation;
+using RecipesApp.Mobile.Services;
 
-namespace Recipes.Mobile;
+namespace RecipesApp.Mobile;
 
 public static class MauiProgram
 {
@@ -64,17 +63,14 @@ public static class MauiProgram
 
         builder.Services.AddSingleton<NavigationService>();
 
-        builder.Services.AddSingleton<INavigationService>(
-            c => c.GetRequiredService<NavigationService>());
+        builder.Services.AddSingleton<INavigationService>(c => c.GetRequiredService<NavigationService>());
 
-        builder.Services.AddSingleton<INavigationInterceptor>(
-            c => c.GetRequiredService<NavigationService>());
+        builder.Services.AddSingleton<INavigationInterceptor>(c => c.GetRequiredService<NavigationService>());
 
         builder.Services.AddSingleton<ILocalizationManager, LocalizationManager>();
 
         var resources = new LocalizedResourcesProvider(AppResources.ResourceManager);
         builder.Services.AddSingleton<ILocalizedResourcesProvider>(resources);
-
 
 
         Routing.RegisterRoute("Overview", typeof(RecipesOverviewPage));
@@ -87,10 +83,10 @@ public static class MauiProgram
 
         var baseAddress = DeviceInfo.Platform ==
             DevicePlatform.Android
-            ? "https://10.0.2.2:7220"
-            : "https://localhost:7220/";
+                ? "https://10.0.2.2:7220"
+                : "https://localhost:7220/";
 
-        HttpClient httpClient = HttpClientHelper.GetPlatformHttpClient(baseAddress);
+        var httpClient = HttpClientHelper.GetPlatformHttpClient(baseAddress);
 
         builder.Services.RegisterRepositories(new RepositorySettings(httpClient));
 

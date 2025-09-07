@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
+
 <ContentPage
-    x:Class="Recipes.Mobile.RecipeRatingDetailPage"
+    x:Class="RecipesApp.Mobile.RecipeRatingDetailPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:conv="clr-namespace:Recipes.Mobile.Converters"
+    xmlns:conv="clr-namespace:RecipesApp.Mobile.Converters"
     xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
-    xmlns:vms="clr-namespace:Recipes.Client.Core.ViewModels;assembly=Recipes.Client.Core"
-    xmlns:viewModels="clr-namespace:Recipes.Client.Core.ViewModels;assembly=RecipesApp.Client.Core"
-    x:DataType="viewModels:RecipeRatingsDetailViewModel"
+    xmlns:vms="clr-namespace:RecipesApp.Client.Core.ViewModels;assembly=RecipesApp.Client.Core"
+    x:DataType="vms:RecipeRatingsDetailViewModel"
     Shell.PresentationMode="ModalAnimated">
     <ContentPage.Resources>
         <conv:RatingToStarsConverter x:Key="ratingToStarsConverter" />
@@ -40,7 +40,7 @@
                 </DataTemplate>
             </CollectionView.HeaderTemplate>
             <CollectionView.GroupHeaderTemplate>
-                <DataTemplate x:DataType="{x:Type viewModels:RatingGroup}">
+                <DataTemplate x:DataType="{x:Type vms:RatingGroup}">
                     <Label
                         Margin="0,25,0,0"
                         FontSize="16"
@@ -48,12 +48,12 @@
                 </DataTemplate>
             </CollectionView.GroupHeaderTemplate>
             <CollectionView.GroupFooterTemplate>
-                <DataTemplate x:DataType="{x:Type viewModels:RatingGroup}">
+                <DataTemplate x:DataType="{x:Type vms:RatingGroup}">
                     <Label FontSize="12" Text="{Binding Count, StringFormat='{0} reviews', Mode=OneTime}" />
                 </DataTemplate>
             </CollectionView.GroupFooterTemplate>
             <CollectionView.ItemTemplate>
-                <DataTemplate x:DataType="viewModels:UserReviewViewModel">
+                <DataTemplate x:DataType="vms:UserReviewViewModel">
                     <Border
                         Margin="25,0"
                         Stroke="LightSlateGray"

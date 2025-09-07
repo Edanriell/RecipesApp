@@ -1,13 +1,13 @@
-using Recipes.Client.Core.ViewModels;
+using RecipesApp.Client.Core.ViewModels;
 
-namespace Recipes.Mobile;
+namespace RecipesApp.Mobile;
 
 public partial class RecipeRatingDetailPage : ContentPage
 {
-	public RecipeRatingDetailPage(
-		RecipeRatingsDetailViewModel viewModel)
-	{
-		InitializeComponent();
-		BindingContext = viewModel;
-	}
+    public RecipeRatingDetailPage(
+        RecipeRatingsDetailViewModel viewModel)
+    {
+        InitializeComponent();
+        BindingContext = viewModel;
+    }
 }

@@ -1,6 +1,6 @@
-﻿using Recipes.Client.Core.ViewModels;
+﻿using RecipesApp.Client.Core.ViewModels;
 
-namespace Recipes.Mobile.TemplateSelectors;
+namespace RecipesApp.Mobile.TemplateSelectors;
 
 public class InstructionsDataTemplateSelector : DataTemplateSelector
 {
@@ -11,7 +11,7 @@ public class InstructionsDataTemplateSelector : DataTemplateSelector
     {
         if (item is InstructionViewModel)
             return InstructionTemplate;
-        else if(item is NoteViewModel)
+        if (item is NoteViewModel)
             return NoteTemplate;
 
         return null;

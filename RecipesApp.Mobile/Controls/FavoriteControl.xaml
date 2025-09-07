@@ -1,10 +1,11 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
+
 <ContentView
-    x:Class="Recipes.Mobile.Controls.FavoriteControl"
+    x:Class="RecipesApp.Mobile.Controls.FavoriteControl"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:Recipes.Mobile.Controls"
     xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:controls="clr-namespace:RecipesApp.Mobile.Controls"
     x:Name="root">
     <ContentView.Resources>
         <toolkit:BoolToObjectConverter
@@ -16,17 +17,17 @@
     <Grid>
         <Image
             HeightRequest="{Binding HeightRequest, Source={x:Reference icon}}"
-            IsVisible="{Binding IsInteractive, Source={RelativeSource AncestorType={x:Type local:FavoriteControl}}}"
+            IsVisible="{Binding IsInteractive, Source={RelativeSource AncestorType={x:Type controls:FavoriteControl}}}"
             Scale="1.2"
             Source="{Binding Source, Source={x:Reference icon}}"
             WidthRequest="{Binding WidthRequest, Source={x:Reference icon}}" />
         <Image
             x:Name="icon"
-            HeightRequest="{Binding HeightRequest, Source={RelativeSource AncestorType={x:Type local:FavoriteControl}}}"
+            HeightRequest="{Binding HeightRequest, Source={RelativeSource AncestorType={x:Type controls:FavoriteControl}}}"
             Source="favorite.png"
-            WidthRequest="{Binding WidthRequest, Source={RelativeSource AncestorType={x:Type local:FavoriteControl}}}">
+            WidthRequest="{Binding WidthRequest, Source={RelativeSource AncestorType={x:Type controls:FavoriteControl}}}">
             <Image.Behaviors>
-                <toolkit:IconTintColorBehavior 
+                <toolkit:IconTintColorBehavior
                     TintColor="{Binding IsFavorite, 
                     Source={x:Reference root}, 
                     Converter={StaticResource isFavoriteToColorConverter}}" />

@@ -1,4 +1,4 @@
-﻿namespace Recipes.Mobile.Misc;
+﻿namespace RecipesApp.Mobile.Misc;
 
 internal static class HttpClientHelper
 {
@@ -8,17 +8,15 @@ internal static class HttpClientHelper
             DeviceInfo.Platform == DevicePlatform.iOS)
         {
             var handler = new HttpsClientHandlerService();
-            return new(handler.GetPlatformMessageHandler())
+            return new HttpClient(handler.GetPlatformMessageHandler())
             {
                 BaseAddress = new Uri(baseAddress)
             };
         }
-        else
+
+        return new HttpClient
         {
-            return new()
-            {
-                BaseAddress = new Uri(baseAddress)
-            };
-        }
+            BaseAddress = new Uri(baseAddress)
+        };
     }
 }

@@ -1,6 +1,6 @@
-﻿using Recipes.Client.Core.Features.Recipes;
+﻿using RecipesApp.Client.Core.Features.Recipes;
 
-namespace Recipes.Client.Core.Navigation;
+namespace RecipesApp.Client.Core.Navigation;
 
 public interface INavigationService
 {

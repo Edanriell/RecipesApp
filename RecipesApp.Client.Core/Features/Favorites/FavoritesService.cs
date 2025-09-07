@@ -1,12 +1,14 @@
 ﻿using CommunityToolkit.Mvvm.Messaging;
-using Recipes.Client.Core.Messages;
+using RecipesApp.Client.Core.Messages;
 
-namespace Recipes.Client.Core.Features.Favorites;
+namespace RecipesApp.Client.Core.Features.Favorites;
 
 public class FavoritesService : IFavoritesService
 {
-    readonly IFavoritesRepository _favoritesRepository;
-    List<string> favorites = null;
+    private readonly IFavoritesRepository _favoritesRepository;
+    private List<string> favorites;
+
+    public FavoritesService(IFavoritesRepository favoritesRepository) { _favoritesRepository = favoritesRepository; }
 
     public async Task<Result<Nothing>> Add(string id)
     {
@@ -21,8 +23,9 @@ public class FavoritesService : IFavoritesService
 
             WeakReferenceMessenger.Default
                 .Send(
-                new FavoriteUpdateMessage(id, true));
+                    new FavoriteUpdateMessage(id, true));
         }
+
         return result;
     }
 
@@ -33,14 +36,13 @@ public class FavoritesService : IFavoritesService
 
         if (result.IsSuccess)
         {
-
             if (favorites is not null
                 && favorites.Contains(id))
                 favorites.Remove(id);
 
             WeakReferenceMessenger.Default
                 .Send(
-                new FavoriteUpdateMessage(id, false));
+                    new FavoriteUpdateMessage(id, false));
         }
 
         return result;
@@ -63,18 +65,13 @@ public class FavoritesService : IFavoritesService
         if (favorites is null)
         {
             var loadResult = await _favoritesRepository.LoadFavorites(GetCurrentUserId());
-            if (loadResult.IsSuccess)
-            {
-                favorites = loadResult.Data.ToList();
-            }
+            if (loadResult.IsSuccess) favorites = loadResult.Data.ToList();
         }
     }
 
     private string GetCurrentUserId()
-        => "3"; //Dummy implementation, could be retrieved via injected 
-
-    public FavoritesService(IFavoritesRepository favoritesRepository)
     {
-        _favoritesRepository = favoritesRepository;
+        return "3";
+        //Dummy implementation, could be retrieved via injected 
     }
 }

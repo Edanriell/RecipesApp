@@ -1,4 +1,4 @@
-﻿namespace Recipes.Client.Core.Navigation;
+﻿namespace RecipesApp.Client.Core.Navigation;
 
 public interface INavigationParameterReceiver
 {

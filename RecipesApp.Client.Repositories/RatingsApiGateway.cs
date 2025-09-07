@@ -1,25 +1,27 @@
-﻿using Recipes.Client.Core;
-using Recipes.Client.Core.Features.Ratings;
-using static Recipes.Client.Repositories.Mappers.RatingsMapper;
+﻿using RecipesApp.Client.Core;
+using RecipesApp.Client.Core.Features.Ratings;
+using RecipesApp.Client.Repositories.Api;
+using static RecipesApp.Client.Repositories.Mappers.RatingsMapper;
 
-namespace Recipes.Mobile.Repositories;
+namespace RecipesApp.Client.Repositories;
 
 internal class RatingsApiGateway : ApiGateway, IRatingsRepository
 {
-    readonly IRatingsApi _api;
+    private readonly IRatingsApi _api;
+
+    public RatingsApiGateway(IRatingsApi api) { _api = api; }
 
     public Task<Result<IReadOnlyCollection<Rating>>>
         GetRatings(string recipeId)
-        => InvokeAndMap(
+    {
+        return InvokeAndMap(
             _api.GetRatings(recipeId), MapRatings);
+    }
 
     public Task<Result<RatingsSummary>>
         GetRatingsSummary(string recipeId)
-        => InvokeAndMap(_api.GetRatingsSummary(recipeId),
-            MapRatingSummary);
-
-    public RatingsApiGateway(IRatingsApi api)
     {
-        _api = api;
+        return InvokeAndMap(_api.GetRatingsSummary(recipeId),
+            MapRatingSummary);
     }
 }

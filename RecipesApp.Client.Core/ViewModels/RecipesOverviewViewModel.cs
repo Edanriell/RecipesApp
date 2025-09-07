@@ -1,57 +1,37 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿using System.Collections.ObjectModel;
+using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using CommunityToolkit.Mvvm.Messaging;
-using Recipes.Client.Core.Features.Favorites;
-using Recipes.Client.Core.Features.Recipes;
-using Recipes.Client.Core.Messages;
-using Recipes.Client.Core.Navigation;
-using System.Collections.ObjectModel;
+using RecipesApp.Client.Core.Features.Favorites;
+using RecipesApp.Client.Core.Features.Recipes;
+using RecipesApp.Client.Core.Messages;
+using RecipesApp.Client.Core.Navigation;
 
-namespace Recipes.Client.Core.ViewModels;
+namespace RecipesApp.Client.Core.ViewModels;
 
 public class RecipesOverviewViewModel : ObservableObject, INavigatedTo, INavigatedFrom
 {
-    private readonly IRecipeService recipeService;
     private readonly IFavoritesService favoritesService;
     private readonly INavigationService navigationService;
+    private readonly IRecipeService recipeService;
 
-    public ObservableCollection<RecipeListItemViewModel> Recipes { get; }
+    private bool _loadFailed;
 
-    RecipeListItemViewModel? _selectedRecipe;
-    public RecipeListItemViewModel? SelectedRecipe
-    {
-        get => _selectedRecipe;
-        set => SetProperty(ref _selectedRecipe, value);
-    }
+    private AsyncRelayCommand _reloadCommand;
 
-    int _totalNumberOfRecipes = 0;
-    public int TotalNumberOfRecipes
-    {
-        get => _totalNumberOfRecipes;
-        set => SetProperty(ref _totalNumberOfRecipes, value);
-    }
+    private RecipeListItemViewModel? _selectedRecipe;
 
-    bool _loadFailed = false;
-    public bool LoadFailed
-    {
-        get => _loadFailed;
-        set => SetProperty(ref _loadFailed, value);
-    }
+    private int _totalNumberOfRecipes;
 
-    public AsyncRelayCommand TryLoadMoreItemsCommand { get; }
-    public AsyncRelayCommand NavigateToSelectedDetailCommand { get; }
-
-    AsyncRelayCommand _reloadCommand;
-    public AsyncRelayCommand ReloadCommand { get => _reloadCommand; set => SetProperty(ref _reloadCommand, value); }
-
-    public RecipesOverviewViewModel(IRecipeService recipeService,
+    public RecipesOverviewViewModel(
+        IRecipeService recipeService,
         IFavoritesService favoritesService, INavigationService navigationService)
     {
         this.recipeService = recipeService;
         this.favoritesService = favoritesService;
         this.navigationService = navigationService;
 
-        Recipes = new();
+        Recipes = new ObservableCollection<RecipeListItemViewModel>();
         TryLoadMoreItemsCommand =
             new AsyncRelayCommand(TryLoadMoreItems);
         NavigateToSelectedDetailCommand =
@@ -67,6 +47,31 @@ public class RecipesOverviewViewModel : ObservableObject, INavigatedTo, INavigat
 
         LoadRecipes(7, 0);
     }
+
+    public ObservableCollection<RecipeListItemViewModel> Recipes { get; }
+
+    public RecipeListItemViewModel? SelectedRecipe
+    {
+        get => _selectedRecipe;
+        set => SetProperty(ref _selectedRecipe, value);
+    }
+
+    public int TotalNumberOfRecipes
+    {
+        get => _totalNumberOfRecipes;
+        set => SetProperty(ref _totalNumberOfRecipes, value);
+    }
+
+    public bool LoadFailed { get => _loadFailed; set => SetProperty(ref _loadFailed, value); }
+
+    public AsyncRelayCommand TryLoadMoreItemsCommand { get; }
+    public AsyncRelayCommand NavigateToSelectedDetailCommand { get; }
+    public AsyncRelayCommand ReloadCommand { get => _reloadCommand; set => SetProperty(ref _reloadCommand, value); }
+
+    public Task OnNavigatedFrom(NavigationType navigationType) { return Task.CompletedTask; }
+
+
+    public Task OnNavigatedTo(NavigationType navigationType) { return Task.CompletedTask; }
 
     private async Task LoadRecipes(int pageSize, int page)
     {
@@ -105,17 +110,5 @@ public class RecipesOverviewViewModel : ObservableObject, INavigatedTo, INavigat
         }
     }
 
-    private async Task TryLoadMoreItems()
-        => await LoadRecipes(7, Recipes.Count / 7);
-
-
-    public Task OnNavigatedTo(NavigationType navigationType)
-    {
-        return Task.CompletedTask;
-    }
-
-    public Task OnNavigatedFrom(NavigationType navigationType)
-    {
-        return Task.CompletedTask;
-    }
+    private async Task TryLoadMoreItems() { await LoadRecipes(7, Recipes.Count / 7); }
 }

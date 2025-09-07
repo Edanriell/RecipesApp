@@ -1,12 +1,12 @@
-using Recipes.Client.Core.ViewModels;
+using RecipesApp.Client.Core.ViewModels;
 
-namespace Recipes.Mobile;
+namespace RecipesApp.Mobile;
 
 public partial class PickLanguagePage : ContentPage
 {
-	public PickLanguagePage(PickLanguageViewModel vm)
-	{
-		InitializeComponent();
-		BindingContext = vm;
-	}
+    public PickLanguagePage(PickLanguageViewModel vm)
+    {
+        InitializeComponent();
+        BindingContext = vm;
+    }
 }

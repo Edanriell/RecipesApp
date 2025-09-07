@@ -1,39 +1,35 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Messaging;
-using Recipes.Client.Core.Features.Recipes;
-using Recipes.Client.Core.Messages;
+using RecipesApp.Client.Core.Features.Recipes;
+using RecipesApp.Client.Core.Messages;
 
-namespace Recipes.Client.Core.ViewModels;
+namespace RecipesApp.Client.Core.ViewModels;
 
 public class IngredientsListViewModel : ObservableObject
 {
     private int _numberOfServings = 4;
+
+    public IngredientsListViewModel(IReadOnlyList<RecipeIngredient> ingredients)
+    {
+        Ingredients = ingredients.Select(i =>
+                new RecipeIngredientViewModel(
+                    i.IngredientName,
+                    i.BaseAmount,
+                    i.Measurement,
+                    i.BaseServings))
+            .ToList();
+    }
+
     public int NumberOfServings
     {
         get => _numberOfServings;
         set
         {
             if (SetProperty(ref _numberOfServings, value))
-            {
                 WeakReferenceMessenger.Default.Send(
                     new ServingsChangedMessage(value));
-            }
         }
     }
 
-    public IngredientsListViewModel(IReadOnlyList<RecipeIngredient> ingredients)
-    {
-        Ingredients = ingredients.Select(i =>
-            new RecipeIngredientViewModel(
-                i.IngredientName,
-                i.BaseAmount,
-                i.Measurement,
-                i.BaseServings))
-            .ToList();
-    }
-
-    public List<RecipeIngredientViewModel> Ingredients
-    {
-        get;
-    }
+    public List<RecipeIngredientViewModel> Ingredients { get; }
 }

@@ -1,3 +1,3 @@
-﻿namespace Recipes.Shared.Dto;
+﻿namespace RecipesApp.Shared.Dto;
 
 public record InstructionDto(string Text, bool IsNote, int? Index);

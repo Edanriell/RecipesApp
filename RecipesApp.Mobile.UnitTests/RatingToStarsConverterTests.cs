@@ -1,6 +1,6 @@
-using Recipes.Mobile.Converters;
+using RecipesApp.Mobile.Converters;
 
-namespace Recipes.Mobile.UnitTests;
+namespace RecipesApp.Mobile.UnitTests;
 
 public class RatingToStarsConverterTests
 {

@@ -1,21 +1,12 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Messaging;
-using Recipes.Client.Core.Messages;
+using RecipesApp.Client.Core.Messages;
 
-namespace Recipes.Client.Core.ViewModels;
+namespace RecipesApp.Client.Core.ViewModels;
 
 public class RecipeListItemViewModel : ObservableObject, IRecipient<FavoriteUpdateMessage>
 {
-    public string Id { get; }
-    public string? Image { get; }
-    public string Title { get; }
-
-    bool _isFavorite;
-    public bool IsFavorite 
-    { 
-        get => _isFavorite; 
-        private set => SetProperty(ref _isFavorite, value);
-    }
+    private bool _isFavorite;
 
     public RecipeListItemViewModel(string id, string title, bool isFavorite, string? image = null)
     {
@@ -27,12 +18,15 @@ public class RecipeListItemViewModel : ObservableObject, IRecipient<FavoriteUpda
         WeakReferenceMessenger.Default.Register(this);
     }
 
+    public string Id { get; }
+    public string? Image { get; }
+    public string Title { get; }
+
+    public bool IsFavorite { get => _isFavorite; private set => SetProperty(ref _isFavorite, value); }
+
     void IRecipient<FavoriteUpdateMessage>
         .Receive(FavoriteUpdateMessage message)
     {
-        if (message.RecipeId == Id)
-        {
-            IsFavorite = message.IsFavorite;
-        }
+        if (message.RecipeId == Id) IsFavorite = message.IsFavorite;
     }
 }

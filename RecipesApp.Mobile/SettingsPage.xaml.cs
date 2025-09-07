@@ -1,12 +1,12 @@
-using Recipes.Client.Core.ViewModels;
+using RecipesApp.Client.Core.ViewModels;
 
-namespace Recipes.Mobile;
+namespace RecipesApp.Mobile;
 
 public partial class SettingsPage : ContentPage
 {
-	public SettingsPage(SettingsViewModel vm)
-	{
-		InitializeComponent();
-		BindingContext = vm;
-	}
+    public SettingsPage(SettingsViewModel vm)
+    {
+        InitializeComponent();
+        BindingContext = vm;
+    }
 }
