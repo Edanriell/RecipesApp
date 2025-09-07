@@ -8,20 +8,21 @@
     xmlns:selectors="clr-namespace:Recipes.Mobile.TemplateSelectors"
     xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
     xmlns:vms="clr-namespace:Recipes.Client.Core.ViewModels;assembly=Recipes.Client.Core"
-    x:DataType="vms:RecipeDetailViewModel">
+    xmlns:viewModels="clr-namespace:Recipes.Client.Core.ViewModels;assembly=RecipesApp.Client.Core"
+    x:DataType="viewModels:RecipeDetailViewModel">
     <ContentPage.Resources>
         <conv:RatingToStarsConverter x:Key="ratingToStarsConverter" />
         <conv:RatingToColorConverter x:Key="ratingToColorConverter" />
         <conv:RatingAndReviewsToColorConverter x:Key="ratingAndReviewsToColorConverter" />
         <conv:InverseBoolConverter x:Key="inverseBoolConverter" />
         <toolkit:ListToStringConverter x:Key="listToStringConverter" Separator=", " />
-        <DataTemplate x:Key="instructionTemplate" x:DataType="vms:InstructionViewModel">
+        <DataTemplate x:Key="instructionTemplate" x:DataType="viewModels:InstructionViewModel">
             <VerticalStackLayout Spacing="10">
                 <Label FontSize="20" Text="{Binding Index, StringFormat='{0:D2}.', Mode=OneTime}" />
                 <Label Margin="10,0" Text="{Binding Description, Mode=OneTime}" />
             </VerticalStackLayout>
         </DataTemplate>
-        <DataTemplate x:Key="noteTemplate" x:DataType="vms:NoteViewModel">
+        <DataTemplate x:Key="noteTemplate" x:DataType="viewModels:NoteViewModel">
             <Grid Margin="20,0" ColumnDefinitions="35,*">
                 <Label
                     FontFamily="MaterialIconsRegular"
@@ -188,7 +189,7 @@
                         FontAttributes="Italic,Bold"
                         FontSize="16"
                         Text="Ingredients list" />
-                    <HorizontalStackLayout x:DataType="vms:IngredientsListViewModel" BindingContext="{Binding IngredientsList, Source={RelativeSource AncestorType={x:Type vms:RecipeDetailViewModel}}}">
+                    <HorizontalStackLayout x:DataType="viewModels:IngredientsListViewModel" BindingContext="{Binding IngredientsList, Source={RelativeSource AncestorType={x:Type viewModels:RecipeDetailViewModel}}}">
                         <Label Text="Number of servings:" VerticalOptions="Center" />
 
                         <Label
@@ -209,10 +210,10 @@
                         BindableLayout.ItemsSource="{Binding IngredientsList.Ingredients}"
                         Spacing="10">
                         <BindableLayout.ItemTemplate>
-                            <DataTemplate x:DataType="vms:RecipeIngredientViewModel">
+                            <DataTemplate x:DataType="viewModels:RecipeIngredientViewModel">
                                 <HorizontalStackLayout Spacing="5">
                                     <Button
-                                        Command="{Binding AddToShoppingListCommand, Source={RelativeSource AncestorType={x:Type vms:RecipeDetailViewModel}}}"
+                                        Command="{Binding AddToShoppingListCommand, Source={RelativeSource AncestorType={x:Type viewModels:RecipeDetailViewModel}}}"
                                         CommandParameter="{Binding}"
                                         FontFamily="MaterialIconsRegular"
                                         Text="&#xe854;" />
@@ -239,10 +240,10 @@
                             BindableLayout.ItemsSource="{Binding ShoppingList, Mode=OneTime}"
                             Spacing="10">
                             <BindableLayout.ItemTemplate>
-                                <DataTemplate x:DataType="vms:RecipeIngredientViewModel">
+                                <DataTemplate x:DataType="viewModels:RecipeIngredientViewModel">
                                     <HorizontalStackLayout Spacing="5">
                                         <Button
-                                            Command="{Binding RemoveFromShoppingListCommand, Source={RelativeSource AncestorType={x:Type vms:RecipeDetailViewModel}}}"
+                                            Command="{Binding RemoveFromShoppingListCommand, Source={RelativeSource AncestorType={x:Type viewModels:RecipeDetailViewModel}}}"
                                             CommandParameter="{Binding}"
                                             FontFamily="MaterialIconsRegular"
                                             Text="&#xe928;" />

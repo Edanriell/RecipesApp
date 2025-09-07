@@ -2,8 +2,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipesApp.Mobile", "RecipesApp.Mobile\RecipesApp.Mobile.csproj", "{C3AB0AA4-FE68-4FB6-9850-625AB2A31673}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipesApp.Mobile.UnitTests", "RecipesApp.Mobile.UnitTests\RecipesApp.Mobile.UnitTests.csproj", "{C3CE4668-D532-4B52-88A0-8B0E3677A5EC}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipesApp.Client.Core", "RecipesApp.Client.Core\RecipesApp.Client.Core.csproj", "{B2C225AA-A6FD-434C-97F9-215124D7D7F8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipesApp.Localization", "RecipesApp.Localization\RecipesApp.Localization.csproj", "{99D7853B-4C7C-408A-B182-0D386B9C61BA}"
@@ -13,6 +11,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipesApp.Client.Core.UnitTests", "RecipesApp.Client.Core.UnitTests\RecipesApp.Client.Core.UnitTests.csproj", "{7F112AEF-7855-4200-AE7C-39E19D9142FF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipesApp.Shared", "RecipesApp.Shared\RecipesApp.Shared.csproj", "{D50612BD-B39A-492A-9567-DDA090A6F2C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipesApp.Client.Repositories", "RecipesApp.Client.Repositories\RecipesApp.Client.Repositories.csproj", "{C3D5755F-29D1-44B3-84A3-9C298B41C6AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipesApp.Mobile.UnitTests", "RecipesApp.Mobile.UnitTests\RecipesApp.Mobile.UnitTests.csproj", "{E0936C13-50F6-422A-B639-0921716CA516}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,10 +26,6 @@ Global
 		{C3AB0AA4-FE68-4FB6-9850-625AB2A31673}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3AB0AA4-FE68-4FB6-9850-625AB2A31673}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3AB0AA4-FE68-4FB6-9850-625AB2A31673}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C3CE4668-D532-4B52-88A0-8B0E3677A5EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C3CE4668-D532-4B52-88A0-8B0E3677A5EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C3CE4668-D532-4B52-88A0-8B0E3677A5EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C3CE4668-D532-4B52-88A0-8B0E3677A5EC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B2C225AA-A6FD-434C-97F9-215124D7D7F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B2C225AA-A6FD-434C-97F9-215124D7D7F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2C225AA-A6FD-434C-97F9-215124D7D7F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -48,5 +46,13 @@ Global
 		{D50612BD-B39A-492A-9567-DDA090A6F2C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D50612BD-B39A-492A-9567-DDA090A6F2C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D50612BD-B39A-492A-9567-DDA090A6F2C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3D5755F-29D1-44B3-84A3-9C298B41C6AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3D5755F-29D1-44B3-84A3-9C298B41C6AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3D5755F-29D1-44B3-84A3-9C298B41C6AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3D5755F-29D1-44B3-84A3-9C298B41C6AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0936C13-50F6-422A-B639-0921716CA516}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0936C13-50F6-422A-B639-0921716CA516}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0936C13-50F6-422A-B639-0921716CA516}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0936C13-50F6-422A-B639-0921716CA516}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

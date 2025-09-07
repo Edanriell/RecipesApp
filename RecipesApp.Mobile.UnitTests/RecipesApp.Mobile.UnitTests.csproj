@@ -4,9 +4,7 @@
         <TargetFramework>net9.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <UseMaui>true</UseMaui>
         <IsPackable>false</IsPackable>
-        <IsTestProject>true</IsTestProject>
     </PropertyGroup>
 
     <ItemGroup>
@@ -28,6 +26,6 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\RecipesApp.Mobile\RecipesApp.Mobile.csproj" />
+      <ProjectReference Include="..\RecipesApp.Mobile\RecipesApp.Mobile.csproj" />
     </ItemGroup>
 </Project>

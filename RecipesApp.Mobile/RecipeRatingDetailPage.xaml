@@ -6,7 +6,8 @@
     xmlns:conv="clr-namespace:Recipes.Mobile.Converters"
     xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
     xmlns:vms="clr-namespace:Recipes.Client.Core.ViewModels;assembly=Recipes.Client.Core"
-    x:DataType="vms:RecipeRatingsDetailViewModel"
+    xmlns:viewModels="clr-namespace:Recipes.Client.Core.ViewModels;assembly=RecipesApp.Client.Core"
+    x:DataType="viewModels:RecipeRatingsDetailViewModel"
     Shell.PresentationMode="ModalAnimated">
     <ContentPage.Resources>
         <conv:RatingToStarsConverter x:Key="ratingToStarsConverter" />
@@ -39,7 +40,7 @@
                 </DataTemplate>
             </CollectionView.HeaderTemplate>
             <CollectionView.GroupHeaderTemplate>
-                <DataTemplate x:DataType="{x:Type vms:RatingGroup}">
+                <DataTemplate x:DataType="{x:Type viewModels:RatingGroup}">
                     <Label
                         Margin="0,25,0,0"
                         FontSize="16"
@@ -47,12 +48,12 @@
                 </DataTemplate>
             </CollectionView.GroupHeaderTemplate>
             <CollectionView.GroupFooterTemplate>
-                <DataTemplate x:DataType="{x:Type vms:RatingGroup}">
+                <DataTemplate x:DataType="{x:Type viewModels:RatingGroup}">
                     <Label FontSize="12" Text="{Binding Count, StringFormat='{0} reviews', Mode=OneTime}" />
                 </DataTemplate>
             </CollectionView.GroupFooterTemplate>
             <CollectionView.ItemTemplate>
-                <DataTemplate x:DataType="vms:UserReviewViewModel">
+                <DataTemplate x:DataType="viewModels:UserReviewViewModel">
                     <Border
                         Margin="25,0"
                         Stroke="LightSlateGray"

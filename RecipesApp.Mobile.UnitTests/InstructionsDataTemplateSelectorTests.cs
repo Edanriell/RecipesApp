@@ -5,7 +5,7 @@ namespace Recipes.Mobile.UnitTests;
 
 public class InstructionsDataTemplateSelectorTests
 {
- 
+
     [Fact]
     public void SelectTemplate_NoteVM_Should_Return_NoteTemplate()
     {
