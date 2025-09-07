@@ -2571,7 +2571,6 @@
             "version": "[2.13.1, )"
           },
           "Microsoft.Maui.Controls": {
-            "suppressParent": "All",
             "target": "Package",
             "version": "[9.0.82, )"
           },

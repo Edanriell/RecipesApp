@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipesApp.Localization", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipesApp.Localization.Maui", "RecipesApp.Localization.Maui\RecipesApp.Localization.Maui.csproj", "{D27BEE3C-5F79-4825-BBAD-E488FC58F893}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipesApp.Client.Core.UnitTests", "RecipesApp.Client.Core.UnitTests\RecipesApp.Client.Core.UnitTests.csproj", "{7F112AEF-7855-4200-AE7C-39E19D9142FF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{D27BEE3C-5F79-4825-BBAD-E488FC58F893}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D27BEE3C-5F79-4825-BBAD-E488FC58F893}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D27BEE3C-5F79-4825-BBAD-E488FC58F893}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F112AEF-7855-4200-AE7C-39E19D9142FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F112AEF-7855-4200-AE7C-39E19D9142FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F112AEF-7855-4200-AE7C-39E19D9142FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F112AEF-7855-4200-AE7C-39E19D9142FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
