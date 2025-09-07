@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipesApp.Mobile.UnitTests
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipesApp.Client.Core", "RecipesApp.Client.Core\RecipesApp.Client.Core.csproj", "{B2C225AA-A6FD-434C-97F9-215124D7D7F8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipesApp.Localization", "RecipesApp.Localization\RecipesApp.Localization.csproj", "{99D7853B-4C7C-408A-B182-0D386B9C61BA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{B2C225AA-A6FD-434C-97F9-215124D7D7F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2C225AA-A6FD-434C-97F9-215124D7D7F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2C225AA-A6FD-434C-97F9-215124D7D7F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99D7853B-4C7C-408A-B182-0D386B9C61BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99D7853B-4C7C-408A-B182-0D386B9C61BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99D7853B-4C7C-408A-B182-0D386B9C61BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99D7853B-4C7C-408A-B182-0D386B9C61BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
